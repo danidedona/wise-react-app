@@ -5,9 +5,13 @@ import Footer from "./components/footer";
 import Home from "./pages/home";
 import Mission from "./pages/mission";
 import EBoard from "./pages/eboard";
-import Events from "./pages/events";
-import NetworkingGala from "./pages/gala";
+import Events from "./pages/events/events";
+import SpringConference from "./pages/SpringConference";
 import Countdown from "./components/countdown";
+import PastEvents from "./pages/events/pastEvents";
+import SingleEvent from "./pages/events/singleEvent";
+import UpcomingEvents from "./pages/events/upcomingEvents";
+import Newsletter from "./pages/newsletter";
 
 const App = () => {
   const [showPopup, setShowPopup] = useState(false);
@@ -30,10 +34,10 @@ const App = () => {
   };
 
   // Hide the banner if we're on the gala page
-  const shouldShowBanner = location.pathname !== "/gala-2025";
+  const shouldShowBanner = location.pathname !== "/spring-conference-2025";
 
   return (
-    <div style={{ fontFamily: "'Atteron', serif" }}>
+    <div className="bg-white" style={{ fontFamily: "'Atteron', serif" }}>
       <Header />
       <main className="mt-32">
         {/* Overlay */}
@@ -60,15 +64,15 @@ const App = () => {
               </button>
 
               <p className="font-bold text-lg mb-6 text-center">
-                Gala Event Countdown!
+                Spring Conference Event Countdown!
               </p>
               <Countdown time="2025-04-19T15:00:00Z" />
               <div className="mt-4 flex justify-between items-center">
                 <a
-                  href="/gala-2025"
+                  href="/spring-conference-2025"
                   className="text-black px-4 py-2 rounded hover:text-red bg-lightPink mx-auto"
                 >
-                  See Gala Details
+                  See Spring Conference Details
                 </a>
               </div>
             </div>
@@ -80,17 +84,24 @@ const App = () => {
           <Route path="/mission" element={<Mission />} />
           <Route path="/eboard" element={<EBoard />} />
           <Route path="/events" element={<Events />} />
-          <Route path="/gala-2025" element={<NetworkingGala />} />
+          <Route path="/past-events" element={<PastEvents />} />
+          <Route path="/events/:slug" element={<SingleEvent />} />
+          <Route path="/upcoming-events" element={<UpcomingEvents />} />
+          <Route
+            path="/spring-conference-2025"
+            element={<SpringConference />}
+          />
+          <Route path="/newsletter" element={<Newsletter />} />
         </Routes>
 
         {/* Banner after popup is dismissed */}
         {shouldShowBanner && !showPopup && (
           <div className="fixed bottom-4 right-4 bg-red text-white px-4 py-2 rounded shadow-lg transform transition-transform duration-200 hover:scale-105">
             <a
-              href="/gala-2025"
+              href="/spring-conference-2025"
               className="text-xl text-white hover:text-white"
             >
-              See Gala Details!
+              See Spring Conference Details!
             </a>
           </div>
         )}

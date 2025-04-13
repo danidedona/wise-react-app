@@ -1,4 +1,5 @@
 import React from "react";
+import LayoutWrapper from "../components/layoutWrapper";
 
 const EBoard = () => {
   const teamMembers = [
@@ -15,9 +16,9 @@ const EBoard = () => {
     {
       name: "Jessica Ding",
       title: "Events Chair",
-      image: "/people/jessica.jpg",
+      image: "/people/jessica.png",
     },
-    { name: "Rita Li", title: "Planning Committee", image: "/people/rita.jpg" },
+    { name: "Rita Li", title: "Planning Committee", image: "/people/rita.png" },
     {
       name: "Sarah Wafa",
       title: "Planning Committee",
@@ -26,7 +27,7 @@ const EBoard = () => {
     {
       name: "Farah Yahaya",
       title: "Mentor-Mentee Coordinator",
-      image: "/farah.jpg",
+      image: "/people/farah.jpg",
     },
     {
       name: "Medha Gereddy",
@@ -36,7 +37,7 @@ const EBoard = () => {
     {
       name: "Moe Shishido",
       title: "Financial Liason",
-      image: "/people/moe.jpg",
+      image: "/people/moe.png",
     },
     {
       name: "Fara Odunlami",
@@ -46,7 +47,7 @@ const EBoard = () => {
     {
       name: "Amelia Allen '27",
       title: "Communications",
-      image: "/people/amelia.png",
+      image: "/people/amelia.jpg",
     },
     {
       name: "Tatiana Sy",
@@ -57,7 +58,7 @@ const EBoard = () => {
     {
       name: "Daniela DeDona",
       title: "Website Developer",
-      image: "daniela.png",
+      image: "/people/daniela.png",
     },
     {
       name: "Kaylee DeGennaro '28",
@@ -81,15 +82,15 @@ const EBoard = () => {
   ];
 
   return (
-    <div
-      className="flex flex-col items-center w-screen min-h-screen px-4 sm:px-36 pt-20"
-      style={{ fontFamily: "'Atteron', serif" }}
-    >
-      <h1 className="text-6xl font-semibold text-black mb-12">
+    <LayoutWrapper>
+      <h1
+        className="text-4xl sm:text-6xl font-semibold text-black mb-12"
+        style={{ fontFamily: "'Atteron', serif" }}
+      >
         Meet the E-Board
       </h1>
 
-      <div className="flex flex-col gap-12 w-full items-center">
+      <div className="mb-6 flex flex-col gap-12 w-full items-center">
         {rows.map((row, i) => (
           <div
             key={i}
@@ -126,7 +127,7 @@ const EBoard = () => {
           </div>
         ))}
       </div>
-    </div>
+    </LayoutWrapper>
   );
 };
 

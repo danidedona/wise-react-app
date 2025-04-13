@@ -1,31 +1,32 @@
 import React from "react";
+import LayoutWrapper from "../components/layoutWrapper";
 
 const Mission = () => {
   return (
-    <div className="flex flex-col items-center w-screen min-h-screen px-4 sm:px-36 pt-20">
+    <LayoutWrapper>
       {/* Top Section: Logo + Text + Logo */}
-      <div className="flex items-center justify-center w-full mb-8">
+      <div className="flex flex-row items-center justify-center w-full mb-8 text-center gap-4 sm:gap-0">
         <img
-          src="/molecule1.png" // Replace with your actual logo path
+          src="/images/molecule1.png"
           alt="Molecule"
-          className="h-24 mx-4"
+          className="h-16 sm:h-24 mx-2"
         />
         <h1
-          className="text-6xl font-semibold text-black"
+          className="text-4xl sm:text-6xl font-semibold text-black"
           style={{ fontFamily: "'Atteron', serif" }}
         >
           Mission
         </h1>
         <img
-          src="/molecule2.png" // Replace with your actual logo path
+          src="/images/molecule2.png"
           alt="Molecule"
-          className="h-24 mx-4"
+          className="h-16 sm:h-24 mx-2"
         />
       </div>
 
       {/* Mission Text Block */}
       <div
-        className="text-center max-w px-4 mt-4 text-4xl text-black mx-16"
+        className="text-center px-4 mt-4 text-lg sm:text-xl md:text-2xl text-black max-w-4xl mx-auto"
         style={{ fontFamily: "'Atteron', serif" }}
       >
         <p>
@@ -41,7 +42,7 @@ const Mission = () => {
           STEM.
         </p>
       </div>
-    </div>
+    </LayoutWrapper>
   );
 };
 

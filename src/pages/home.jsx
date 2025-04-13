@@ -1,77 +1,83 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
+import ImageModal from "../components/imageModal";
+import LayoutWrapper from "../components/layoutWrapper";
 
 const Home = () => {
-  const images = [
-    {
-      title: "Image One",
-      link: "#",
-      imageUrl: "/homepage/AMWA x WISE Panel 10.18.23.jpg",
-    },
-    {
-      title: "Image Two",
-      link: "#",
-      imageUrl: "/homepage/IMG_1559.JPG",
-    },
-    {
-      title: "Image Three",
-      link: "#",
-      imageUrl: "/homepage/IMG_1573.JPG",
-    },
-    {
-      title: "Image Four",
-      link: "#",
-      imageUrl: "/homepage/IMG_1857.JPG",
-    },
-    {
-      title: "Image Five",
-      link: "#",
-      imageUrl: "/homepage/IMG_6375.JPG",
-    },
-    {
-      title: "Image Six",
-      link: "#",
-      imageUrl: "/homepage/Networking session.jpeg",
-    },
-    {
-      title: "Image Seven",
-      link: "#",
-      imageUrl: "/homepage/Senior gifts.jpeg",
-    },
-    {
-      title: "Image Eight",
-      link: "#",
-      imageUrl: "/homepage/squareplaceholder.png",
-    },
-    {
-      title: "Image Nine",
-      link: "#",
-      imageUrl: "/homepage/squareplaceholder.png",
-    },
-    {
-      title: "Image Ten",
-      link: "#",
-      imageUrl: "/homepage/longplaceholder.jpg",
-    },
-    {
-      title: "Image Eleven",
-      link: "#",
-      imageUrl: "/homepage/squareplaceholder.png",
-    },
-    {
-      title: "Image Tweleve",
-      link: "#",
-      imageUrl: "/homepage/medplaceholder.jpeg",
-    },
-  ];
+  const [images, setImages] = useState([]);
+  const [selectedImage, setSelectedImage] = useState(null);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [columns, setColumns] = useState(5);
+
+  // Adjust columns based on window width
+  useEffect(() => {
+    const updateColumns = () => {
+      const width = window.innerWidth;
+      if (width < 640) setColumns(1);
+      else if (width < 768) setColumns(2);
+      else if (width < 1024) setColumns(3);
+      else setColumns(5);
+    };
+
+    updateColumns();
+    window.addEventListener("resize", updateColumns);
+    return () => window.removeEventListener("resize", updateColumns);
+  }, []);
+
+  // Dynamically load images from public/homepage
+  useEffect(() => {
+    const folder = "/homepage";
+    const extensions = [
+      ".jpg",
+      ".jpeg",
+      ".png",
+      ".webp",
+      ".heic",
+      ".HEIC",
+      ".JPG",
+      ".JPEG",
+      ".PNG",
+      ".WEBP",
+    ];
+
+    const loadImages = async () => {
+      const foundImages = [];
+      let index = 1;
+
+      const testImage = (url) =>
+        new Promise((resolve) => {
+          const img = new Image();
+          img.src = url;
+          img.onload = () => resolve(url);
+          img.onerror = () => resolve(null);
+        });
+
+      while (index <= 100) {
+        let validUrl = null;
+        for (const ext of extensions) {
+          const url = `${folder}/${index}${ext}`;
+          const result = await testImage(url);
+          if (result) {
+            validUrl = url;
+            break;
+          }
+        }
+        if (!validUrl) break;
+        foundImages.push(validUrl);
+        index++;
+      }
+
+      setImages(foundImages);
+    };
+
+    loadImages();
+  }, []);
 
   return (
-    <div className="px-36 py-24">
-      {/* First Section: Title, Description, Button, and Image */}
-      <section className="flex flex-col md:flex-row items-center space-x-8 pr-6">
-        {/* Left Column */}
+    <LayoutWrapper>
+      {/* Top Section */}
+      <section className="flex flex-col md:flex-row items-center space-y-10 md:space-y-0 md:space-x-8">
         <div className="flex-1 flex flex-col items-center text-center">
           <h1
             className="text-7xl font-semibold mb-6 text-black"
@@ -87,47 +93,55 @@ const Home = () => {
             activities for all Women in STEM at <br />
             Brown University
           </p>
-          <Link to="/join">
+          <a
+            href="https://wiseatbrown.substack.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <button className="bg-medPink text-black px-8 py-4 text-xl rounded-md transition-transform duration-300 hover:-translate-y-1">
               JOIN!
             </button>
-          </Link>
+          </a>
         </div>
 
-        {/* Right Column */}
         <div className="flex-1">
           <img
-            src="/images/longplaceholder.jpg" // Replace with your image path
+            src="/homepage/cover/cover.jpg"
             alt="WiSE"
             className="w-full h-auto rounded-md shadow-lg"
           />
         </div>
       </section>
 
-      {/* Collage Section */}
-      <section className="mt-12">
-        <ImageList variant="masonry" cols={5} gap={10}>
-          {images.map((item, index) => (
-            <ImageListItem key={index}>
-              <img
-                srcSet={`${item.imageUrl}?w=248&fit=crop&auto=format&dpr=2 2x`}
-                src={`${item.imageUrl}?w=248&fit=crop&auto=format`}
-                alt={item.title}
-                loading="lazy"
-                style={{
-                  width: "100%",
-                  height: "auto",
-                  maxHeight: "300px",
-                  objectFit: "contain", // key to preserving aspect ratio
-                  display: "block",
-                  margin: "0 auto",
-                }}
-              />
-            </ImageListItem>
-          ))}
-        </ImageList>
+      {/* Masonry Collage Section */}
+      <section className="mt-16">
+        <div className="w-full max-w-screen-xl mx-auto px-2">
+          <ImageList variant="masonry" cols={columns} gap={12}>
+            {images.map((src, i) => (
+              <ImageListItem key={i}>
+                <img
+                  src={src}
+                  alt={`Homepage collage ${i + 1}`}
+                  loading="lazy"
+                  className="w-full h-auto object-cover rounded-xl shadow-md cursor-pointer"
+                  onClick={() => {
+                    setSelectedImage(src);
+                    setModalOpen(true);
+                  }}
+                />
+              </ImageListItem>
+            ))}
+          </ImageList>
+        </div>
       </section>
-    </div>
+
+      {/* Modal Viewer */}
+      <ImageModal
+        isOpen={modalOpen}
+        onClose={() => setModalOpen(false)}
+        imageSrc={selectedImage}
+      />
+    </LayoutWrapper>
   );
 };
 
