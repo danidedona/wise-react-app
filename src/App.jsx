@@ -6,7 +6,7 @@ import Home from "./pages/home";
 import Mission from "./pages/mission";
 import EBoard from "./pages/eboard";
 import Events from "./pages/events/events";
-import SpringConference from "./pages/SpringConference";
+import SpringConference from "./pages/springConference";
 import Countdown from "./components/countdown";
 import PastEvents from "./pages/events/pastEvents";
 import SingleEvent from "./pages/events/singleEvent";
