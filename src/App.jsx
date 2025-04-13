@@ -16,28 +16,43 @@ import Newsletter from "./pages/newsletter";
 const App = () => {
   const [showPopup, setShowPopup] = useState(false);
   const [showOverlay, setShowOverlay] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const location = useLocation();
 
+  // Show popup on home page
   useEffect(() => {
-    // Only show popup when on the home page
     if (location.pathname === "/") {
       setTimeout(() => {
         setShowPopup(true);
         setShowOverlay(true);
       }, 2000);
     }
-  }, [location.pathname]); // Runs whenever the location changes (for navigation)
+  }, [location.pathname]);
+
+  // Detect screen size
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 640);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const dismissPopup = () => {
     setShowPopup(false);
     setShowOverlay(false);
   };
 
-  // Hide the banner if we're on the gala page
-  const shouldShowBanner = location.pathname !== "/spring-conference-2025";
+  const shouldShowBanner =
+    location.pathname !== "/spring-conference-2025" && !isMobile;
 
   return (
-    <div className="bg-white" style={{ fontFamily: "'Atteron', serif" }}>
+    <div
+      className="bg-white min-h-screen text-black"
+      style={{ fontFamily: "'Atteron', serif" }}
+    >
       <Header />
       <main className="mt-32">
         {/* Overlay */}
@@ -49,13 +64,12 @@ const App = () => {
         {showPopup && (
           <div
             className="fixed top-0 left-0 right-0 bottom-0 bg-black bg-opacity-50 z-40"
-            onClick={dismissPopup} // Click anywhere on the background to dismiss
+            onClick={dismissPopup}
           >
             <div
               className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white text-black p-6 rounded-lg z-50 shadow-lg"
-              onClick={(e) => e.stopPropagation()} // Prevent the click on the popup content from dismissing
+              onClick={(e) => e.stopPropagation()}
             >
-              {/* X Button */}
               <button
                 onClick={dismissPopup}
                 className="absolute top-2 right-2 text-xl text-black hover:text-red bg-white"

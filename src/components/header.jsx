@@ -50,7 +50,7 @@ const Header = () => {
           {/* Hamburger icon (mobile only) */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="block md:hidden text-black"
+            className="block md:hidden text-black bg-white"
           >
             {menuOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
