@@ -1,11 +1,11 @@
-# 🧠 WiSE Website Documentation
+# WiSE Website Documentation
 
 **Maintainer:** Daniela DeDona  
 **Last updated:** April 2025
 
 ---
 
-## 📌 Overview
+## Overview
 
 This site is a **React app** embedded into a **WordPress page** via an `<iframe>`.  
 It is deployed via **Netlify** and auto-updates whenever the GitHub repo changes.  
@@ -13,7 +13,7 @@ All content — especially events — is dynamic and editable through modular `.
 
 ---
 
-## 🧩 What is an Event?
+## What is an Event?
 
 Events are configured using a JavaScript object in `.jsx` files. Here's a complete example:
 
@@ -35,7 +35,7 @@ export default {
 };
 ```
 
-### ✨ Key Fields:
+### Key Fields:
 
 | Field         | Description                                                              |
 | ------------- | ------------------------------------------------------------------------ |
@@ -43,16 +43,16 @@ export default {
 | `title`       | Event name                                                               |
 | `date`        | Event date                                                               |
 | `location`    | Event location                                                           |
+| `description` | Required for past events (used on full event page)                       |
 | `link`        | What clicking the event redirects to (`/events/event-slug`)              |
 | `flier`       | Path to event flyer (used for upcoming events only)                      |
 | `rsvpLink`    | Optional RSVP form link (used in upcoming events)                        |
 | `coverImage`  | Used for past events as the thumbnail                                    |
-| `description` | Required for past events (used on full event page)                       |
 | `imageFolder` | Path to folder containing numbered event images (`/pastEvents/my-event`) |
 
 ---
 
-## 📅 How to Add an Upcoming Event
+## How to Add an Upcoming Event
 
 1. Go to:
 
@@ -93,7 +93,7 @@ public/events/event-folder-name/
 
 ---
 
-## 📦 How to Make It a Past Event
+## How to Make It a Past Event
 
 1. **Move** the event file from:
 
@@ -133,7 +133,7 @@ They must be sequential and in supported formats (`.jpg`, `.png`, `.webp`)
 
 ---
 
-## 🖼️ How Image Loading Works
+## How Image Loading Works
 
 - Image folders are scanned from the `imageFolder` path
 - The code attempts to load images named `1.jpg`, `2.jpg`, `3.png`, etc.
@@ -142,7 +142,7 @@ They must be sequential and in supported formats (`.jpg`, `.png`, `.webp`)
 
 ---
 
-## 🛠 Deployment Notes
+## Deployment Notes
 
 - The site is deployed to [**Netlify**](https://www.netlify.com/)
 - Pushing to the main GitHub branch **automatically triggers deployment**
@@ -157,9 +157,9 @@ https://brownwise.netlify.app/
 
 ---
 
-## 📝 Example: Upcoming vs Past Event Format
+## Example: Upcoming vs Past Event Format
 
-### ✅ Upcoming Event:
+### Upcoming Event:
 
 ```js
 export default {
@@ -173,7 +173,7 @@ export default {
 };
 ```
 
-### ✅ Past Event:
+### Past Event:
 
 ```js
 export default {
@@ -190,14 +190,14 @@ export default {
 
 ---
 
-## ⚠️ Notes and Gotchas
+## ⚠️ Notes
 
-- ✅ **Image formats:** Use `.jpg`, `.png`, `.webp` — ❌ `.heic` will not display
-- ✅ `index` controls order — lower = more recent
-- ✅ `flier` is only used in upcoming events
-- ✅ `description`, `coverImage`, and `imageFolder` are only used for past events
-- ✅ RSVP buttons only render if `rsvpLink` is present
-- ✅ Flyer images are clickable and will link to the event's detail page if `link` is set
+- **Image formats:** Use `.jpg`, `.png`, `.webp` — ❌ `.heic` will not display
+- `index` controls order — lower = more recent
+- `flier` is only used in upcoming events
+- `description`, `coverImage`, and `imageFolder` are only used for past events
+- RSVP buttons only render if `rsvpLink` is present
+- Flyer images are clickable and will link to the event's detail page if `link` is set
 
 ---
 
@@ -216,5 +216,3 @@ export default {
 
 Feel free to contact **Daniela DeDona**  
 Happy coding! 💻🧬
-
----
