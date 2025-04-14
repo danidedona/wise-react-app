@@ -94,7 +94,7 @@ const Home = () => {
             Brown University
           </p>
           <a
-            href="https://wiseatbrown.substack.com"
+            href="http://wiseatbrown.substack.com/subscribe"
             target="_blank"
             rel="noopener noreferrer"
           >

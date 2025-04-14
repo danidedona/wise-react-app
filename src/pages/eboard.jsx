@@ -4,12 +4,12 @@ import LayoutWrapper from "../components/layoutWrapper";
 const EBoard = () => {
   const teamMembers = [
     {
-      name: "Helen Chow '26",
+      name: "Helen Chow",
       title: "Co-President",
       image: "/people/helen.jpg",
     },
     {
-      name: "Aiai Calmer '26",
+      name: "Aiai Calmer",
       title: "Co-President",
       image: "/people/aiai.jpg",
     },
@@ -45,7 +45,7 @@ const EBoard = () => {
       image: "/people/fara.jpg",
     },
     {
-      name: "Amelia Allen '27",
+      name: "Amelia Allen",
       title: "Communications",
       image: "/people/amelia.jpg",
     },
@@ -61,12 +61,12 @@ const EBoard = () => {
       image: "/people/daniela.png",
     },
     {
-      name: "Kaylee DeGennaro '28",
+      name: "Kaylee DeGennaro",
       title: "First Year Rep",
       image: "/people/kaylee.jpg",
     },
     {
-      name: "Lavanya Garg '28",
+      name: "Lavanya Garg",
       title: "Freshman Rep",
       image: "/people/lavanya.jpg",
     },
