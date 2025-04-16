@@ -4,7 +4,7 @@ import Header from "./components/header";
 import Footer from "./components/footer";
 import Home from "./pages/home";
 import Mission from "./pages/mission";
-import EBoard from "./pages/eboard";
+import EBoard from "./pages/eboard/eboard";
 import Events from "./pages/events/events";
 import SpringConference from "./pages/springConference";
 import Countdown from "./components/countdown";

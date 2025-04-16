@@ -112,38 +112,251 @@ const SpringConference = () => {
               <h2 className="text-2xl font-semibold text-black mb-6">
                 Faculty in Attendance
               </h2>
-              <p className="text-lg text-black">TBD</p>
+              {/* Future of Tech and Sustainability */}
+              <div className="mb-6">
+                <h3 className="font-semibold text-black text-lg mb-2">
+                  Future of Tech and Sustainability
+                </h3>
+                <ul className="space-y-2 text-black">
+                  <li>
+                    <p className="font-medium">Nicole Nugent</p>
+                    <p className="text-sm text-gray-700">
+                      Assistant Professor, Psychiatry and Human Behavior
+                    </p>
+                  </li>
+                  <li>
+                    <p className="font-medium">Michael Donohue</p>
+                    <p className="text-sm text-gray-700">
+                      Assoc. Professor of Engineering, Director of Masters
+                      Programs
+                    </p>
+                  </li>
+                  <li>
+                    <p className="font-medium">Joy Zeng</p>
+                    <p className="text-sm text-gray-700">
+                      Adjunct Assistant Professor, Engineering
+                    </p>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Power of Representation */}
+              <div className="mb-6">
+                <h3 className="font-semibold text-black text-lg mb-2">
+                  Power of Representation
+                </h3>
+                <ul className="space-y-2 text-black">
+                  <li>
+                    <p className="font-medium">Phyllis Dennery</p>
+                    <p className="text-sm text-gray-700">
+                      Pediatrician-in-Chief, Hasbro Children’s
+                    </p>
+                  </li>
+                  <li>
+                    <p className="font-medium">Kathi Fisler</p>
+                    <p className="text-sm text-gray-700">
+                      Professor (Research), Co-Director of CS Undergrad Studies
+                    </p>
+                  </li>
+                  <li>
+                    <p className="font-medium">Tejal Desai</p>
+                    <p className="text-sm text-gray-700">
+                      Dean of Engineering, Professor of Engineering
+                    </p>
+                  </li>
+                  <li>
+                    <p className="font-medium">Li Qiong Wang</p>
+                    <p className="text-sm text-gray-700">
+                      Distinguished Senior Lecturer, Chemistry
+                    </p>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Navigating Medical School */}
+              <div className="mb-6">
+                <h3 className="font-semibold text-black text-lg mb-2">
+                  Navigating Medical School
+                </h3>
+                <ul className="space-y-2 text-black">
+                  <li>
+                    <p className="font-medium">Alaa Elnajjar</p>
+                    <p className="text-sm text-gray-700">
+                      Child & Adolescent Psychiatrist, Bradley Hospital
+                    </p>
+                  </li>
+                  <li>
+                    <p className="font-medium">Anwen Lin</p>
+                    <p className="text-sm text-gray-700">
+                      Medical Student, Alpert Medical School
+                    </p>
+                  </li>
+                  <li>
+                    <p className="font-medium">Elyse Sauber</p>
+                    <p className="text-sm text-gray-700">Medical Student</p>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Non-Traditional STEM Careers */}
+              <div className="mb-6">
+                <h3 className="font-semibold text-black text-lg mb-2">
+                  Non-Traditional STEM Careers
+                </h3>
+                <ul className="space-y-2 text-black">
+                  <li>
+                    <p className="font-medium">Malabika Sarker</p>
+                    <p className="text-sm text-gray-700">
+                      Assoc. Dean of Global Engagement
+                    </p>
+                  </li>
+                  <li>
+                    <p className="font-medium">Adina Badea</p>
+                    <p className="text-sm text-gray-700">[Role Not Provided]</p>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Global Perspectives */}
+              <div className="mb-6">
+                <h3 className="font-semibold text-black text-lg mb-2">
+                  Global Perspectives
+                </h3>
+                <ul className="space-y-2 text-black">
+                  <li>
+                    <p className="font-medium">Dr. Margot Martinez-Moreno</p>
+                    <p className="text-sm text-gray-700">Brown Neurosurgery</p>
+                  </li>
+                  <li>
+                    <p className="font-medium">Peipei Zhou</p>
+                    <p className="text-sm text-gray-700">
+                      Asst. Professor, Computer Engineering
+                    </p>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Empowering Women to Lead in STEM */}
+              <div className="mb-6">
+                <h3 className="font-semibold text-black text-lg mb-2">
+                  Empowering Women to Lead in STEM
+                </h3>
+                <ul className="space-y-2 text-black">
+                  <li>
+                    <p className="font-medium">Dr. Patricia Sullivan</p>
+                    <p className="text-sm text-gray-700">Brown Neurosurgery</p>
+                  </li>
+                  <li>
+                    <p className="font-medium">Joy Zeng</p>
+                    <p className="text-sm text-gray-700">
+                      Adjunct Assistant Professor, Engineering
+                    </p>
+                  </li>
+                </ul>
+              </div>
+
+              {/* STEM Education */}
+              <div className="mb-6">
+                <h3 className="font-semibold text-black text-lg mb-2">
+                  STEM Education
+                </h3>
+                <ul className="space-y-2 text-black">
+                  <li>
+                    <p className="font-medium">Michael Donohue</p>
+                    <p className="text-sm text-gray-700">
+                      Assoc. Professor of Engineering
+                    </p>
+                  </li>
+                  <li>
+                    <p className="font-medium">Karla Kaun</p>
+                    <p className="text-sm text-gray-700">
+                      Professor, Neuroscience
+                    </p>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Building STEM Communities */}
+              <div className="mb-6">
+                <h3 className="font-semibold text-black text-lg mb-2">
+                  Building STEM Communities
+                </h3>
+                <ul className="space-y-2 text-black">
+                  <li>
+                    <p className="font-medium">Kimberly Turner</p>
+                    <p className="text-sm text-gray-700">
+                      Postdoctoral Research Fellow in International and Public
+                      Affairs
+                    </p>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Mental Health & Building Resiliency */}
+              <div className="mb-6">
+                <h3 className="font-semibold text-black text-lg mb-2">
+                  Mental Health & Building Resiliency
+                </h3>
+                <ul className="space-y-2 text-black">
+                  <li>
+                    <p className="font-medium">Alaa Elnajjar</p>
+                    <p className="text-sm text-gray-700">
+                      Child & Adolescent Psychiatrist, Bradley Hospital
+                    </p>
+                  </li>
+                  <li>
+                    <p className="font-medium">Nicole Nugent</p>
+                    <p className="text-sm text-gray-700">
+                      Assistant Professor, Psychiatry and Human Behavior
+                    </p>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
 
-          {/* RIGHT - Student Groups */}
-          <div className="bg-red p-8 px-20 w-full flex flex-col justify-between">
-            <div className="max-w-4xl mx-auto w-full">
-              <h2 className="text-2xl font-semibold text-white mb-6">
+          {/* RIGHT - Student Groups + Thank You */}
+          <div className="bg-red text-white w-full p-8 px-20 flex flex-col gap-12">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-2xl font-semibold mb-6">
                 Participating Student Groups
               </h2>
-              <ul className="list-disc list-inside text-lg text-white space-y-2 mb-10">
-                <li>Association for Women in Mathematics</li>
-                <li>American Medical Women's Association</li>
+              <ul className="list-disc list-inside space-y-2 text-lg">
+                <li>
+                  Association for Women in Mathematics –{" "}
+                  <a
+                    href="mailto:awm@brown.edu"
+                    className="underline text-white hover:text-lightPink"
+                  >
+                    awm@brown.edu
+                  </a>
+                </li>
+                <li>
+                  American Medical Women's Association –{" "}
+                  <a
+                    href="mailto:brown-amwa@brown.edu"
+                    className="underline text-white hover:text-lightPink"
+                  >
+                    brown-amwa@brown.edu
+                  </a>
+                </li>
                 <li>Women Build @ Brown</li>
               </ul>
             </div>
 
             {/* Thank You Card */}
-            <div className="flex justify-center mt-auto">
-              <div className="bg-white text-black p-6 rounded-lg shadow max-w-xl w-full text-center mt-6 mb-2">
-                <h3 className="text-2xl font-bold text-red mb-3">Thank You</h3>
-                <p className="text-base text-left mb-2">
-                  Thank you to all our amazing faculty and graduate students who
-                  have been a wonderful source of support and inspiration to
-                  women at Brown.
-                </p>
-                <p className="text-base text-left">
-                  Thank you to all our student groups who have put in the time
-                  and effort to support and create welcoming spaces for women in
-                  STEM at Brown.
-                </p>
-              </div>
+            <div className="max-w-md mx-auto bg-white text-black p-6 rounded-lg shadow-md text-center md:mt-32">
+              <h3 className="text-2xl font-bold text-red mb-4">Thank You</h3>
+              <p className="text-md mb-2">
+                Thank you to all our amazing faculty and graduate students who
+                have been a wonderful source of support and inspiration to women
+                at Brown.
+              </p>
+              <p className="text-md">
+                Thank you to all our student groups who have put in the time and
+                effort to support and create welcoming spaces for women in STEM
+                at Brown.
+              </p>
             </div>
           </div>
         </div>
