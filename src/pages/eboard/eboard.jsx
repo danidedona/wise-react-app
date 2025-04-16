@@ -16,11 +16,7 @@ const EBoard = () => {
       linkedin: "",
       title: "Co-President",
       image: "/people/helen/helen.jpg",
-      extraPhotos: [
-        "/images/wiseandshine.png",
-        "/images/wiseandshine.png",
-        "/images/wiseandshine.png",
-      ],
+      extraPhotos: [],
     },
     {
       name: "Aiai Calmer",
@@ -33,28 +29,22 @@ const EBoard = () => {
       linkedin: "",
       title: "Co-President",
       image: "/people/aiai/aiai.jpg",
-      extraPhotos: [
-        "/images/wiseandshine.png",
-        "/images/wiseandshine.png",
-        "/images/wiseandshine.png",
-      ],
+      extraPhotos: [],
     },
+
     {
       name: "Jessica Ding",
-      pronouns: "",
-      graduation: "",
+      pronouns: "she/her",
+      graduation: "2026",
       concentration: "Neuroscience, Philosophy",
-      hometown: "",
-      blurb: "",
-      email: "",
-      linkedin: "",
+      hometown: "Dallas, TX",
+      blurb:
+        "Hey everyone! I'm Jessica (CO 2026), the Events Chair for WiSE! I'm from Dallas, TX and am concentrating in neuroscience and philosophy. I joined WiSE in my freshman year and have loved getting to connect with other women in STEM on campus <3 In my free time, I enjoy eating Sichuan food, playing Catan, and going to concerts!",
+      email: "jessica_ding@brown.edu",
+      linkedin: "www.linkedin.com/in/jessica-ding-235788229",
       title: "Events Chair",
       image: "/people/jessica/jessica.png",
-      extraPhotos: [
-        "/images/wiseandshine.png",
-        "/images/wiseandshine.png",
-        "/images/wiseandshine.png",
-      ],
+      extraPhotos: [],
     },
     {
       name: "Rita Li",
@@ -67,11 +57,7 @@ const EBoard = () => {
       linkedin: "",
       title: "Planning Committee",
       image: "/people/rita/rita.png",
-      extraPhotos: [
-        "/images/wiseandshine.png",
-        "/images/wiseandshine.png",
-        "/images/wiseandshine.png",
-      ],
+      extraPhotos: [],
     },
     {
       name: "Sarah Wafa",
@@ -84,11 +70,7 @@ const EBoard = () => {
       linkedin: "",
       title: "Planning Committee",
       image: "/people/sarah/sarah.jpg",
-      extraPhotos: [
-        "/images/wiseandshine.png",
-        "/images/wiseandshine.png",
-        "/images/wiseandshine.png",
-      ],
+      extraPhotos: [],
     },
     {
       name: "Farah Yahaya",
@@ -101,11 +83,7 @@ const EBoard = () => {
       linkedin: "",
       title: "Mentor-Mentee Coordinator",
       image: "/people/farah/farah.jpg",
-      extraPhotos: [
-        "/images/wiseandshine.png",
-        "/images/wiseandshine.png",
-        "/images/wiseandshine.png",
-      ],
+      extraPhotos: [],
     },
     {
       name: "Medha Gereddy",
@@ -118,11 +96,7 @@ const EBoard = () => {
       linkedin: "",
       title: "Financial Liason",
       image: "/people/medha/medha.jpg",
-      extraPhotos: [
-        "/images/wiseandshine.png",
-        "/images/wiseandshine.png",
-        "/images/wiseandshine.png",
-      ],
+      extraPhotos: [],
     },
     {
       name: "Moe Shishido",
@@ -135,11 +109,7 @@ const EBoard = () => {
       linkedin: "",
       title: "Financial Liason",
       image: "/people/moe/moe.png",
-      extraPhotos: [
-        "/images/wiseandshine.png",
-        "/images/wiseandshine.png",
-        "/images/wiseandshine.png",
-      ],
+      extraPhotos: [],
     },
     {
       name: "Fara Odunlami",
@@ -152,11 +122,7 @@ const EBoard = () => {
       linkedin: "",
       title: "Financial Liason",
       image: "/people/fara/fara.jpg",
-      extraPhotos: [
-        "/images/wiseandshine.png",
-        "/images/wiseandshine.png",
-        "/images/wiseandshine.png",
-      ],
+      extraPhotos: [],
     },
     {
       name: "Amelia Allen",
@@ -169,11 +135,7 @@ const EBoard = () => {
       linkedin: "",
       title: "Communications",
       image: "/people/amelia/amelia.jpg",
-      extraPhotos: [
-        "/images/wiseandshine.png",
-        "/images/wiseandshine.png",
-        "/images/wiseandshine.png",
-      ],
+      extraPhotos: [],
     },
     {
       name: "Tatiana Sy",
@@ -186,11 +148,7 @@ const EBoard = () => {
       linkedin: "",
       title: "Communications",
       image: "/people/tatiana/tatiana.jpg",
-      extraPhotos: [
-        "/images/wiseandshine.png",
-        "/images/wiseandshine.png",
-        "/images/wiseandshine.png",
-      ],
+      extraPhotos: [],
     },
     {
       name: "Lisa Miyazaki",
@@ -203,11 +161,7 @@ const EBoard = () => {
       linkedin: "",
       title: "Newsletter",
       image: "/people/lisa/lisa.jpeg",
-      extraPhotos: [
-        "/images/wiseandshine.png",
-        "/images/wiseandshine.png",
-        "/images/wiseandshine.png",
-      ],
+      extraPhotos: [],
     },
     {
       name: "Daniela DeDona",
@@ -221,11 +175,7 @@ const EBoard = () => {
       linkedin: "https://www.linkedin.com/in/daniela-dedona/",
       title: "Website Developer",
       image: "/people/daniela/daniela.png",
-      extraPhotos: [
-        "/images/wiseandshine.png",
-        "/images/wiseandshine.png",
-        "/images/wiseandshine.png",
-      ],
+      extraPhotos: [],
     },
     {
       name: "Kaylee DeGennaro",
@@ -238,11 +188,7 @@ const EBoard = () => {
       linkedin: "",
       title: "First Year Rep",
       image: "/people/kaylee/kaylee.jpg",
-      extraPhotos: [
-        "/images/wiseandshine.png",
-        "/images/wiseandshine.png",
-        "/images/wiseandshine.png",
-      ],
+      extraPhotos: [],
     },
     {
       name: "Lavanya Garg",
@@ -255,11 +201,7 @@ const EBoard = () => {
       linkedin: "",
       title: "Freshman Rep",
       image: "/people/lavanya/lavanya.jpg",
-      extraPhotos: [
-        "/images/wiseandshine.png",
-        "/images/wiseandshine.png",
-        "/images/wiseandshine.png",
-      ],
+      extraPhotos: [],
     },
   ];
 
