@@ -7,13 +7,14 @@ const EBoard = () => {
   const teamMembers = [
     {
       name: "Helen Chow",
-      pronouns: "",
-      graduation: "",
-      concentration: "Neuroscience, Entrepreneurship Certificate",
-      hometown: "",
-      blurb: "",
-      email: "",
-      linkedin: "",
+      pronouns: "she/her",
+      graduation: "2026",
+      concentration: "Neuroscience, Entrepreneurship",
+      hometown: "San Francisco, CA",
+      blurb:
+        "I've been part of WiSE throughout my undergrad, serving as mentor, Website & Newsletter Chair, and now co-President! I've loved sharing my passion for science and forming stronger connections with other women in STEM. Outside of WiSE, I am on the executive board of Chinese Students Association and Brown Pre-Dental Society. I love playing bridge, snowboarding, and sailing with my family and friends.",
+      email: "helen_chow@brown.edu",
+      linkedin: "https://www.linkedin.com/in/helen-chow-539b93202/",
       title: "Co-President",
       image: "/people/helen/helen.jpg",
       extraPhotos: [],
