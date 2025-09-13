@@ -32,7 +32,6 @@ const EBoard = () => {
       image: "/people/aiai/aiai.jpg",
       extraPhotos: [],
     },
-
     {
       name: "Jessica Ding",
       pronouns: "she/her",
@@ -43,7 +42,7 @@ const EBoard = () => {
         "Hey everyone! I'm Jessica (CO 2026), the Events Chair for WiSE! I'm from Dallas, TX and am concentrating in neuroscience and philosophy. I joined WiSE in my freshman year and have loved getting to connect with other women in STEM on campus <3 In my free time, I enjoy eating Sichuan food, playing Catan, and going to concerts!",
       email: "jessica_ding@brown.edu",
       linkedin: "www.linkedin.com/in/jessica-ding-235788229",
-      title: "Events Chair",
+      title: "Communications",
       image: "/people/jessica/jessica.png",
       extraPhotos: [],
     },
@@ -56,25 +55,12 @@ const EBoard = () => {
       blurb: "",
       email: "",
       linkedin: "",
-      title: "Planning Committee",
+      title: "Events",
       image: "/people/rita/rita.png",
       extraPhotos: [],
     },
     {
-      name: "Sarah Wafa",
-      pronouns: "",
-      graduation: "",
-      concentration: "",
-      hometown: "",
-      blurb: "",
-      email: "",
-      linkedin: "",
-      title: "Planning Committee",
-      image: "/people/sarah/sarah.jpg",
-      extraPhotos: [],
-    },
-    {
-      name: "Farah Yahaya",
+      name: "Fara Odunlami",
       pronouns: "",
       graduation: "",
       concentration: "Cognitive Neuroscience, Literary Arts",
@@ -82,8 +68,8 @@ const EBoard = () => {
       blurb: "",
       email: "",
       linkedin: "",
-      title: "Mentor-Mentee Coordinator",
-      image: "/people/farah/farah.jpg",
+      title: "Financial Liaison",
+      image: "/people/fara/fara.jpg",
       extraPhotos: [],
     },
     {
@@ -95,34 +81,21 @@ const EBoard = () => {
       blurb: "",
       email: "",
       linkedin: "",
-      title: "Financial Liason",
+      title: "Sponsorship Liaison",
       image: "/people/medha/medha.jpg",
       extraPhotos: [],
     },
     {
       name: "Moe Shishido",
-      pronouns: "",
+      pronouns: "she/her",
       graduation: "",
-      concentration: "",
-      hometown: "",
+      concentration: "Biochemistry and Molecular Biology",
+      hometown: "Japan, Thailand, and Hong Kong",
       blurb: "",
-      email: "",
+      email: "moe_shishido@brown.edu",
       linkedin: "",
-      title: "Financial Liason",
+      title: "Financial Liaison + Treasurer",
       image: "/people/moe/moe.png",
-      extraPhotos: [],
-    },
-    {
-      name: "Fara Odunlami",
-      pronouns: "",
-      graduation: "",
-      concentration: "Engineering",
-      hometown: "",
-      blurb: "",
-      email: "",
-      linkedin: "",
-      title: "Financial Liason",
-      image: "/people/fara/fara.jpg",
       extraPhotos: [],
     },
     {
@@ -132,36 +105,23 @@ const EBoard = () => {
       concentration: "Biomedical Engineering",
       hometown: "Oakland, CA",
       blurb:
-        "Hi!! I’m a sophomore from Oakland, CA. I’m a BME concentrator. I enjoy going to concerts, TV, and crafts. I have been a WiSE mentor for 2 years, Eboard member for 1 year, and mentor for 1 year.  ",
+        "Hi!! I’m a sophomore from Oakland, CA. I’m a BME concentrator. I enjoy going to concerts, TV, and crafts. I have been a WiSE mentor for 2 years, Eboard member for 1 year, and mentor for 1 year.",
       email: "amelia_allen@brown.edu",
-      linkedin: "www.linkedin.com/in/amelia-allen27 ",
+      linkedin: "www.linkedin.com/in/amelia-allen27",
       title: "Communications",
       image: "/people/amelia/amelia.jpg",
       extraPhotos: [],
     },
     {
-      name: "Tatiana Sy",
-      pronouns: "",
-      graduation: "",
-      concentration: "Design Engineering",
-      hometown: "",
-      blurb: "",
-      email: "",
-      linkedin: "",
-      title: "Communications",
-      image: "/people/tatiana/tatiana.jpg",
-      extraPhotos: [],
-    },
-    {
       name: "Lisa Miyazaki",
-      pronouns: "",
-      graduation: "",
-      concentration: "Biology, Public Health",
-      hometown: "",
+      pronouns: "she/her",
+      graduation: "2026",
+      concentration: "Public Health, Biology",
+      hometown: "Hawai’i",
       blurb: "",
-      email: "",
+      email: "lisa_miyazaki@brown.edu",
       linkedin: "",
-      title: "Newsletter",
+      title: "Communications + Newsletter",
       image: "/people/lisa/lisa.jpeg",
       extraPhotos: [],
     },
@@ -172,7 +132,7 @@ const EBoard = () => {
       concentration: "Computer Science, Cognitive Science",
       hometown: "Mahopac, NY",
       blurb:
-        "Hi all! I'm a junior from the middle of nowhere, NY. I'm a CS^2 concentrator (computer and cognitive science). Besides stem, I adore listening to music, ballroom dance, and the outdoors! I have been an active member of WiSE for 3 years and a mentor for 1. I cant wait to share the experience of being a WiSE member with you all!",
+        "Hi all! I'm a senior from the middle of nowhere, NY. I'm a CS^2 concentrator (computer and cognitive science). Besides stem, I adore listening to music, ballroom dance, and the outdoors! I have been an active member of WiSE ever since my freshman year. I cant wait to share the experience of being a WiSE member with you all!",
       email: "daniela_dedona@brown.edu",
       linkedin: "https://www.linkedin.com/in/daniela-dedona/",
       title: "Website Developer",
@@ -180,28 +140,15 @@ const EBoard = () => {
       extraPhotos: [],
     },
     {
-      name: "Kaylee DeGennaro",
-      pronouns: "",
-      graduation: "",
-      concentration: "Physics",
-      hometown: "",
-      blurb: "",
-      email: "",
-      linkedin: "",
-      title: "First Year Rep",
-      image: "/people/kaylee/kaylee.jpg",
-      extraPhotos: [],
-    },
-    {
       name: "Lavanya Garg",
-      pronouns: "",
-      graduation: "",
-      concentration: "Computational Biology",
-      hometown: "",
+      pronouns: "she/her",
+      graduation: "2028",
+      concentration: "Computational Biology and Behavioral Decision Sciences",
+      hometown: "India and the Philippines",
       blurb: "",
       email: "",
       linkedin: "",
-      title: "Freshman Rep",
+      title: "Events",
       image: "/people/lavanya/lavanya.jpg",
       extraPhotos: [],
     },
@@ -240,8 +187,8 @@ const EBoard = () => {
       </div>
 
       {/* Desktop only: manual rows */}
-      <div className="hidden md:flex flex-col gap-12 w-full items-center">
-        {[2, 4, 3, 4, 2]
+      <div className="hidden lg:flex flex-col gap-12 w-full items-center">
+        {[2, 3, 3, 3]
           .reduce(
             (acc, len) => {
               const row = teamMembers.slice(acc.offset, acc.offset + len);
@@ -259,8 +206,6 @@ const EBoard = () => {
                   ? "max-w-[360px]"
                   : row.length === 3
                   ? "max-w-[560px]"
-                  : row.length === 4
-                  ? "max-w-[760px]"
                   : ""
               }`}
             >

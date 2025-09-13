@@ -12,6 +12,7 @@ import PastEvents from "./pages/events/pastEvents";
 import SingleEvent from "./pages/events/singleEvent";
 import UpcomingEvents from "./pages/events/upcomingEvents";
 import Newsletter from "./pages/newsletter";
+import MentorMentee from "./pages/mentormentee";
 
 const App = () => {
   // const [showPopup, setShowPopup] = useState(false);
@@ -98,6 +99,7 @@ const App = () => {
           <Route path="/mission" element={<Mission />} />
           <Route path="/eboard" element={<EBoard />} />
           <Route path="/events" element={<Events />} />
+          <Route path="/mentormentee" element={<MentorMentee />} />
           <Route path="/past-events" element={<PastEvents />} />
           <Route path="/events/:slug" element={<SingleEvent />} />
           <Route path="/upcoming-events" element={<UpcomingEvents />} />
