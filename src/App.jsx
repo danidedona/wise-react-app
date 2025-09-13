@@ -50,11 +50,11 @@ const App = () => {
 
   return (
     <div
-      className="bg-white min-h-screen text-black"
+      className="bg-white min-h-screen text-black flex flex-col"
       style={{ fontFamily: "'Atteron', serif" }}
     >
       <Header />
-      <main className="mt-32">
+      <main className="mt-32 flex-grow">
         {/* Overlay */}
         {/* {showOverlay && (
           <div className="fixed inset-0 bg-black bg-opacity-50 z-40"></div>

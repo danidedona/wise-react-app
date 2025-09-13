@@ -16,8 +16,8 @@ const Header = () => {
 
   return (
     <header className="bg-lightPink">
-      {/* Top Header */}
-      <div className="flex items-center justify-between py-4 px-4 sm:px-6 md:pt-4 md:pb-0 fixed top-0 left-0 right-0 z-20 bg-lightPink">
+      {/* Top Header (logo + title + menu) */}
+      <div className="flex items-center justify-between py-4 px-4 sm:px-6 md:pt-4 md:pb-0 fixed top-0 left-0 right-0 z-20 bg-lightPink border-b-4 border-red md:border-b-0">
         {/* Logo (Left) */}
         <div className="flex justify-start basis-1/4">
           <img
@@ -39,14 +39,6 @@ const Header = () => {
 
         {/* Contact + Hamburger (Right) */}
         <div className="flex justify-end items-center gap-4 basis-1/4">
-          <a
-            href="/contact"
-            className="hidden sm:inline-block text-sm sm:text-base text-black px-2 py-2 hover:text-red transition"
-            style={{ fontFamily: "'Lora', serif" }}
-          >
-            Contact
-          </a>
-
           {/* Hamburger icon (mobile only) */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
@@ -75,13 +67,13 @@ const Header = () => {
 
       {/* Dropdown Menu - Mobile */}
       {menuOpen && (
-        <div className="md:hidden fixed top-[60px] w-full bg-lightPink border-b border-red z-10 shadow-md px-4 py-4 space-y-3 pt-6">
+        <div className="md:hidden fixed top-[60px] w-full bg-lightPink border-b-4 border-red z-10 shadow-md px-4 py-4 space-y-3 pt-6">
           {navLinks.map((item) => (
             <Link
               key={item.path}
               to={item.path}
               onClick={() => setMenuOpen(false)}
-              className={`block text-base ${
+              className={`block text-sm ${
                 location.pathname === item.path ? "text-red" : "text-black"
               } hover:text-red transition-colors duration-200`}
               style={{ fontFamily: "'Lora', serif" }}
