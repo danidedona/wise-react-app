@@ -17,7 +17,7 @@ const PastEvents = () => {
       }
 
       // Sort by index (lower index = more recent = further left)
-      loadedEvents.sort((a, b) => a.index - b.index);
+      loadedEvents.sort((a, b) => b.index - a.index);
 
       setEvents(loadedEvents);
     };

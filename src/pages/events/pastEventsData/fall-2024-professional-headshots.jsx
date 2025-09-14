@@ -1,5 +1,5 @@
 export default {
-  index: 3,
+  index: 1,
   title: "Fall 2024 Professional Headshots",
   date: "November 17, 2024",
   description:

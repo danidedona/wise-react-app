@@ -1,5 +1,5 @@
 export default {
-  index: 1,
+  index: 3,
   title: "Spring 2025 Course Registration",
   date: "April 9, 2025",
   description:

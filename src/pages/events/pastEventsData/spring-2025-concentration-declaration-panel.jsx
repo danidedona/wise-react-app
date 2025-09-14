@@ -1,5 +1,5 @@
 export default {
-  index: 0,
+  index: 2,
   title: "Spring 2025 Concentration Declaration Panel",
   date: "March 3, 2025",
   description:

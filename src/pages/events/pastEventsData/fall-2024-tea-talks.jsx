@@ -1,5 +1,5 @@
 export default {
-  index: 2,
+  index: 0,
   title: "Fall 2024 Tea Talks",
   date: "October 18-19, 2024",
   description:
