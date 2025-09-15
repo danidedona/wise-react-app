@@ -5,8 +5,8 @@ export default {
   time: "5:00 PM - 6:00 PM",
   location: "Friedman 102",
   description: "", // used later when converting to past
-  link: "/events/fall-2025-first-gb-meeting",
-  flier: "/eventImages/event-folder-name/flier.jpg",
+  link: "",
+  flier: "/events/fall-2025-first-gb-meeting/flier.png",
   coverImage: "", // not used in upcoming, only in past
   imageFolder: "", // used later when converting to past
 };

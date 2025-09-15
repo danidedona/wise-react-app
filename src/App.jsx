@@ -152,7 +152,7 @@ const App = () => {
               {/* Close button */}
               <button
                 onClick={dismissPopup}
-                className="absolute top-3 right-3 text-2xl text-gray-600 hover:text-red"
+                className="absolute top-3 right-3 text-2xl text-gray-600 hover:text-red bg-white/70"
               >
                 ×
               </button>
@@ -167,12 +167,12 @@ const App = () => {
               {/* Two-column layout */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {/* First GB Meeting */}
-                <div className="bg-lightPink rounded-lg shadow-md overflow-hidden flex flex-col">
+                <div className="bg-lightPink pt-4 rounded-lg shadow-md overflow-hidden flex flex-col">
                   {/* Image */}
                   <img
-                    src="/eventImages/gb-meeting/flier.jpg"
+                    src="/events/fall-2025-first-gb-meeting/flier.png"
                     alt="First GB Meeting"
-                    className="w-full h-48 object-cover"
+                    className="w-full h-48 object-contain"
                   />
 
                   {/* Content */}
@@ -185,7 +185,7 @@ const App = () => {
                     </p>
                     <p className="text-md text-gray-700">🕔 5:00 – 6:00 PM</p>
                     <p className="text-md text-gray-700 mb-4">
-                      📍 85 Waterman St
+                      📍 Friedman 102
                     </p>
                   </div>
                 </div>
