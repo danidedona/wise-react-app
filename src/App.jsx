@@ -13,6 +13,7 @@ import SingleEvent from "./pages/events/singleEvent";
 import UpcomingEvents from "./pages/events/upcomingEvents";
 import Newsletter from "./pages/newsletter";
 import MentorMentee from "./pages/mentormentee";
+import EBoardApplications from "./pages/eboardapplications";
 
 const App = () => {
   // -----------------------------------------------------------
@@ -48,6 +49,9 @@ const App = () => {
     setShowPopup(false);
     setShowOverlay(false);
   };
+
+  const shouldShowBanner = location.pathname !== "/eboard-applications";
+
   // -----------------------------------------------------------
   // CURRENT POPUP
   // -----------------------------------------------------------
@@ -142,7 +146,7 @@ const App = () => {
             onClick={dismissPopup}
           >
             <div
-              className="bg-white text-black p-6 rounded-xl z-50 shadow-2xl max-w-5xl w-full mx-4 relative"
+              className="bg-white text-black p-6 rounded-xl z-50 shadow-2xl max-w-5xl w-full mx-4 relative max-h-[90vh] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
             >
               {/* Close button */}
@@ -188,13 +192,6 @@ const App = () => {
 
                 {/* E-Board Applications */}
                 <div className="bg-lightPink rounded-lg shadow-md overflow-hidden flex flex-col">
-                  {/* Image */}
-                  <img
-                    src="/eventImages/eb-apps/flier.jpg"
-                    alt="E-Board Applications"
-                    className="w-full h-48 object-cover"
-                  />
-
                   {/* Content */}
                   <div className="p-4 flex flex-col flex-grow text-center">
                     <h3 className="text-xl font-bold text-red mb-2">
@@ -214,9 +211,7 @@ const App = () => {
                       <li>Communications / Social Media</li>
                     </ul>
                     <a
-                      href="https://forms.gle/7MUNWoZksXdxxSw36"
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      href="/eboard-applications"
                       className="mt-auto inline-block border-2 border-red text-red font-semibold px-4 py-2 rounded-lg transition-colors duration-300 hover:bg-red hover:text-white"
                     >
                       Apply Now
@@ -244,7 +239,26 @@ const App = () => {
             element={<SpringConference />}
           />
           <Route path="/newsletter" element={<Newsletter />} />
+          <Route path="/eboard-applications" element={<EBoardApplications />} />
         </Routes>
+
+        {/* ----------- FOR CURRENT POPUP ----------- */}
+        {shouldShowBanner && !showPopup && (
+          <div
+            className="fixed bottom-4 right-4 bg-red text-white 
+                  px-3 py-1 sm:px-4 sm:py-2 
+                  rounded shadow-lg transform transition-transform duration-200 hover:scale-105 z-50"
+          >
+            <a
+              href="/eboard-applications"
+              className="text-sm sm:text-xl text-white hover:text-white"
+            >
+              E-Board Applications Open! Apply Now →
+            </a>
+          </div>
+        )}
+
+        {/* ----------- FOR CURRENT POPUP ----------- */}
 
         {/* ----------- FOR GALA ----------- */}
         {/* Banner after popup is dismissed */}
