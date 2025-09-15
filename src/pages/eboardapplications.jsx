@@ -32,7 +32,7 @@ export default function EBoardApplications() {
 
         {/* RIGHT COLUMN — 3/4 width */}
         <div className="md:col-span-3 flex flex-col">
-          <h2 className="text-xl font-semibold mb-4 text-red">
+          <h2 className="text-xl font-semibold mb-4 text-red text-center">
             Application Form
           </h2>
           <iframe
