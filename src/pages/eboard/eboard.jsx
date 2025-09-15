@@ -98,7 +98,7 @@ const EBoard = () => {
       email: "moe_shishido@brown.edu",
       linkedin: "https://www.linkedin.com/in/moe-s1118/",
       title: "Financial Liaison + Treasurer",
-      image: "/people/moe/moe.png",
+      image: "/people/moe/moe.jpg",
       extraPhotos: [],
     },
     {
