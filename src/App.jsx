@@ -170,7 +170,7 @@ const App = () => {
                 <div className="bg-lightPink pt-4 rounded-lg shadow-md overflow-hidden flex flex-col">
                   {/* Image */}
                   <img
-                    src="/events/fall-2025-first-gb-meeting/flier.png"
+                    src="  /events/fall-2025-first-gb-meeting/flier.jpg"
                     alt="First GB Meeting"
                     className="w-full h-48 object-contain"
                   />
@@ -185,7 +185,7 @@ const App = () => {
                     </p>
                     <p className="text-md text-gray-700">🕔 5:00 – 6:00 PM</p>
                     <p className="text-md text-gray-700 mb-4">
-                      📍 Friedman 102
+                      📍 Friedman 202
                     </p>
                   </div>
                 </div>
