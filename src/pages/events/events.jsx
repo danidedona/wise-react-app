@@ -57,6 +57,26 @@ const Events = () => {
           </a>
         </div>
       </div>
+
+      <h1
+        className="text-4xl sm:text-6xl font-semibold text-black mt-20"
+        style={{ fontFamily: "'Atteron', serif" }}
+      >
+        Calendar
+      </h1>
+
+      {/* Google Calendar Embed */}
+      <div className="mt-16 flex justify-center">
+        <iframe
+          src="https://calendar.google.com/calendar/embed?src=c_1a7e677e6e89b4be80d85c7d193a99b5c97222eab16188f0ca1d6484ce1fbba b%40group.calendar.google.com&ctz=America%2FNew_York"
+          style={{ border: 0 }}
+          width="1000"
+          height="600"
+          frameBorder="0"
+          scrolling="no"
+          title="WiSE Calendar"
+        ></iframe>
+      </div>
     </LayoutWrapper>
   );
 };
