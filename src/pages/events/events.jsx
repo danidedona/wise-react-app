@@ -68,7 +68,7 @@ const Events = () => {
       {/* Google Calendar Embed */}
       <div className="mt-16 flex justify-center">
         <iframe
-          src="https://calendar.google.com/calendar/embed?src=c_1a7e677e6e89b4be80d85c7d193a99b5c97222eab16188f0ca1d6484ce1fbba b%40group.calendar.google.com&ctz=America%2FNew_York"
+          src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FNew_York&showPrint=0&src=Y18xYTdlNjc3ZTZlODliNGJlODBkODVjN2QxOTNhOTliNWM5NzIyMmVhYjE2MTg4ZjBjYTFkNjQ4NGNlMWZiYmFiQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%238e24aa"
           style={{ border: 0 }}
           width="1000"
           height="600"
