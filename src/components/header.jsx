@@ -9,7 +9,7 @@ const Header = () => {
   const navLinks = [
     { path: "/", label: "Home" },
     { path: "/mission", label: "About/Mission" },
-    // TODO UNCOMMENT ON 9/18 { path: "/mentormentee", label: "Mentor-Mentee Program" },
+    { path: "/mentormentee", label: "Mentor-Mentee Program" },
     { path: "/eboard", label: "Meet the Team" },
     { path: "/events", label: "Events" },
     { path: "/newsletter", label: "Newsletter" },
