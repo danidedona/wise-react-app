@@ -25,7 +25,8 @@ const EBoard = () => {
       graduation: "2026",
       concentration: "Neuroscience, History",
       hometown: "Highland, MD",
-      blurb: "",
+      blurb:
+        "Aiai has been a part of WiSE for her entire undergraduate career and thinks of WiSE as her second home. She loves organizing programming that connects women in STEM across campus and mentoring underclasssmen 1-1 as a part of the mentor-mentee program. Aiai is excited to work with everyone on the E-Board again and continue fostering relationships for underserved communities in science fields. You can find Aiai TAing for NEUR1030 and walking her adorable dog Gigi.",
       email: "aiai_calmer@brown.edu",
       linkedin: "https://www.linkedin.com/in/aiaicalmer/",
       title: "Co-President",
@@ -62,15 +63,16 @@ const EBoard = () => {
     },
     {
       name: "Fara Odunlami",
-      pronouns: "",
-      graduation: "",
+      pronouns: "she/her",
+      graduation: "2026",
       concentration: "Cognitive Neuroscience, Literary Arts",
-      hometown: "",
-      blurb: "",
+      hometown: "Morristown, NJ",
+      blurb:
+        "Fara is a senior from New Jersey, studying Computer Science, Enginering and Literary Arts. This is her third year on the finance team for WISE and she's excited to get to know the new members! She loves reading, writing, and live music. ",
       email: "",
-      linkedin: "",
+      linkedin: "https://www.linkedin.com/in/fara-odunlami/ ",
       title: "Financial Liaison",
-      image: "/people/fara/fara.jpg",
+      image: "/people/fara/fara.png",
       extraPhotos: [],
     },
     {
@@ -108,7 +110,7 @@ const EBoard = () => {
       concentration: "Biomedical Engineering",
       hometown: "Oakland, CA",
       blurb:
-        "Hi!! I’m a junior from Oakland, CA. I’m a BME concentrator. I enjoy going to concerts, TV, and crafts. This is my second year on the WiSE EB team! ",
+        "Hi!! I’m a junior from Oakland, CA. I’m a BME concentrator. I enjoy going to concerts, TV, and crafts. This is my second year on the WiSE EB team!",
       email: "amelia_allen@brown.edu",
       linkedin: "www.linkedin.com/in/amelia-allen27",
       title: "Communications",

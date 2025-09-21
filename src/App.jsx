@@ -164,59 +164,32 @@ const App = () => {
                 WiSE Announcements
               </h2>
 
-              {/* Two-column layout */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {/* First GB Meeting */}
-                <div className="bg-lightPink pt-4 rounded-lg shadow-md overflow-hidden flex flex-col">
-                  {/* Image */}
-                  <img
-                    src="  /events/fall-2025-first-gb-meeting/flier.jpg"
-                    alt="First GB Meeting"
-                    className="w-full h-48 object-contain"
-                  />
-
-                  {/* Content */}
-                  <div className="p-4 flex flex-col flex-grow text-center">
-                    <h3 className="text-xl font-bold text-red mb-2">
-                      First General Body Meeting
-                    </h3>
-                    <p className="text-md text-gray-700">
-                      📅 September 18, 2025
-                    </p>
-                    <p className="text-md text-gray-700">🕔 5:00 – 6:00 PM</p>
-                    <p className="text-md text-gray-700 mb-4">
-                      📍 Friedman 202
-                    </p>
-                  </div>
-                </div>
-
-                {/* E-Board Applications */}
-                <div className="bg-lightPink rounded-lg shadow-md overflow-hidden flex flex-col">
-                  {/* Content */}
-                  <div className="p-4 flex flex-col flex-grow text-center">
-                    <h3 className="text-xl font-bold text-red mb-2">
-                      E-Board Applications
-                    </h3>
-                    <p className="text-md text-gray-700 mb-3">
-                      Applications for Fall 2025 are open! Join WiSE leadership
-                      and help organize events, manage outreach, and build
-                      community. Positions available include:
-                    </p>
-                    <ul className="text-sm text-gray-700 text-left mb-4 list-disc list-inside">
-                      <li>President / Vice President</li>
-                      <li>Treasurer</li>
-                      <li>Events Chair</li>
-                      <li>Outreach Chair</li>
-                      <li>Mentor-Mentee Coordinator</li>
-                      <li>Communications / Social Media</li>
-                    </ul>
-                    <a
-                      href="/eboard-applications"
-                      className="mt-auto inline-block border-2 border-red text-red font-semibold px-4 py-2 rounded-lg transition-colors duration-300 hover:bg-red hover:text-white"
-                    >
-                      Apply Now
-                    </a>
-                  </div>
+              {/* E-Board Applications */}
+              <div className="bg-lightPink rounded-lg shadow-md overflow-hidden flex flex-col">
+                {/* Content */}
+                <div className="p-4 flex flex-col flex-grow text-center">
+                  <h3 className="text-xl font-bold text-red mb-2">
+                    E-Board Applications
+                  </h3>
+                  <p className="text-md text-gray-700 mb-3">
+                    Applications for Fall 2025 are open! Join WiSE leadership
+                    and help organize events, manage outreach, and build
+                    community. Positions available include:
+                  </p>
+                  <ul className="text-sm text-gray-700 text-left mb-4 list-disc list-inside">
+                    <li>President / Vice President</li>
+                    <li>Treasurer</li>
+                    <li>Events Chair</li>
+                    <li>Outreach Chair</li>
+                    <li>Mentor-Mentee Coordinator</li>
+                    <li>Communications / Social Media</li>
+                  </ul>
+                  <a
+                    href="/eboard-applications"
+                    className="mt-auto inline-block border-2 border-red text-red font-semibold px-4 py-2 rounded-lg transition-colors duration-300 hover:bg-red hover:text-white"
+                  >
+                    Apply Now
+                  </a>
                 </div>
               </div>
             </div>
