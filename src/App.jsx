@@ -140,7 +140,7 @@ const App = () => {
         {/* ----------- FOR GALA ----------- */}
 
         {/* ----------- FOR CURRENT POPUP ----------- */}
-        {showPopup && (
+        {/* {showPopup && (
           <div
             className="fixed top-0 left-0 right-0 bottom-0 bg-black bg-opacity-50 z-40 flex items-center justify-center"
             onClick={dismissPopup}
@@ -149,7 +149,7 @@ const App = () => {
               className="bg-white text-black p-6 rounded-xl z-50 shadow-2xl max-w-5xl w-full mx-4 relative max-h-[90vh] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
             >
-              {/* Close button */}
+    
               <button
                 onClick={dismissPopup}
                 className="absolute top-3 right-3 text-2xl text-gray-600 hover:text-red bg-white/70"
@@ -164,9 +164,9 @@ const App = () => {
                 WiSE Announcements
               </h2>
 
-              {/* E-Board Applications */}
+       
               <div className="bg-lightPink rounded-lg shadow-md overflow-hidden flex flex-col">
-                {/* Content */}
+              
                 <div className="p-4 flex flex-col flex-grow text-center">
                   <h3 className="text-xl font-bold text-red mb-2">
                     E-Board Applications
@@ -194,7 +194,7 @@ const App = () => {
               </div>
             </div>
           </div>
-        )}
+        )} */}
 
         {/* ----------- FOR CURRENT POPUP ----------- */}
 
@@ -216,7 +216,7 @@ const App = () => {
         </Routes>
 
         {/* ----------- FOR CURRENT POPUP ----------- */}
-        {shouldShowBanner && !showPopup && (
+        {/* {shouldShowBanner && !showPopup && (
           <div
             className="fixed bottom-4 right-4 bg-red text-white 
                   px-3 py-1 sm:px-4 sm:py-2 
@@ -229,7 +229,7 @@ const App = () => {
               E-Board Applications Open! Apply Now →
             </a>
           </div>
-        )}
+        )} */}
 
         {/* ----------- FOR CURRENT POPUP ----------- */}
 
