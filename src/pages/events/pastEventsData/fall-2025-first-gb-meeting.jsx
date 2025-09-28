@@ -1,6 +1,6 @@
 export default {
   index: 5,
-  title: "First General Body Meeting",
+  title: "Fall 2025 First General Body Meeting",
   date: "September 18, 2025",
   time: "5:00 PM - 6:00 PM",
   location: "Friedman 202",
