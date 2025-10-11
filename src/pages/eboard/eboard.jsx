@@ -67,7 +67,7 @@ const EBoard = () => {
       concentration: "Cognitive Neuroscience, Literary Arts",
       hometown: "Morristown, NJ",
       blurb:
-        "Fara is a senior from New Jersey, studying Computer Science, Enginering and Literary Arts. This is her third year on the finance team for WISE and she's excited to get to know the new members! She loves reading, writing, and live music. ",
+        "Fara is a senior from New Jersey, studying Computer Science, Enginering and Literary Arts. This is her third year on the finance team for WISE and she's excited to get to know the new members! She loves reading, writing, and live music.",
       email: "",
       linkedin: "https://www.linkedin.com/in/fara-odunlami/",
       title: "Financial Liaison",
@@ -158,7 +158,6 @@ const EBoard = () => {
       image: "/people/lavanya/lavanya.jpg",
       extraPhotos: [],
     },
-    // ---- NEW MEMBERS ----
     {
       name: "Hilary Nguyen",
       pronouns: "she/her",
@@ -184,7 +183,7 @@ const EBoard = () => {
       email: "ricci_waksman@brown.edu",
       linkedin: "www.linkedin.com/in/ricci-waksman-144b78370",
       title: "Mentor-Mentee Coordinator",
-      image: "/people/ricci/ricci.JPEG",
+      image: "/people/ricci/ricci.jpg",
       extraPhotos: [],
     },
     {
@@ -213,7 +212,7 @@ const EBoard = () => {
       linkedin:
         "https://www.linkedin.com/in/nikoleta-stoynova-4b0345247?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
       title: "Underclassmen Representative",
-      image: "/people/nikoleta/nikoleta.png",
+      image: "/people/nikoleta/nikoleta.jpg",
       extraPhotos: [],
     },
   ];
@@ -229,28 +228,29 @@ const EBoard = () => {
         Meet the E-Board
       </h1>
 
-      {/* Mobile layout */}
+      {/* Mobile (≤md) */}
       <div className="block md:hidden grid grid-cols-2 gap-6 justify-items-center">
-        {teamMembers.map((member, index) => (
-          <div
-            key={index}
-            className="flex flex-col items-center w-[140px] sm:w-[160px] cursor-pointer hover:scale-105 transition-transform duration-200"
+        {teamMembers.map((member, i) => (
+          <MemberCard
+            key={i}
+            member={member}
             onClick={() => setSelectedMember(member)}
-          >
-            <div className="bg-red p-1.5 rounded-xl w-full overflow-hidden">
-              <img
-                src={member.image}
-                alt={member.name}
-                className="w-full h-[180px] object-cover rounded-lg"
-              />
-            </div>
-            <h3 className="text-center font-semibold mt-3">{member.name}</h3>
-            <p className="text-center text-red text-sm">{member.title}</p>
-          </div>
+          />
         ))}
       </div>
 
-      {/* Desktop layout */}
+      {/* Medium (md < width < lg) */}
+      <div className="hidden md:grid lg:hidden grid-cols-3 gap-8 justify-items-center">
+        {teamMembers.map((member, i) => (
+          <MemberCard
+            key={i}
+            member={member}
+            onClick={() => setSelectedMember(member)}
+          />
+        ))}
+      </div>
+
+      {/* Large (≥lg) */}
       <div className="hidden lg:flex flex-col gap-12 w-full items-center">
         {[2, 3, 3, 3, 4]
           .reduce(
@@ -276,23 +276,11 @@ const EBoard = () => {
               }`}
             >
               {row.map((member, j) => (
-                <div
+                <MemberCard
                   key={j}
-                  className="flex flex-col items-center w-[160px] cursor-pointer hover:scale-105 transition-transform duration-200"
+                  member={member}
                   onClick={() => setSelectedMember(member)}
-                >
-                  <div className="bg-red p-1.5 rounded-xl w-full overflow-hidden">
-                    <img
-                      src={member.image}
-                      alt={member.name}
-                      className="w-full h-[180px] object-cover rounded-lg"
-                    />
-                  </div>
-                  <h3 className="text-center font-semibold mt-3">
-                    {member.name}
-                  </h3>
-                  <p className="text-center text-red text-sm">{member.title}</p>
-                </div>
+                />
               ))}
             </div>
           ))}
@@ -307,5 +295,23 @@ const EBoard = () => {
     </LayoutWrapper>
   );
 };
+
+/* Reusable small card component */
+const MemberCard = ({ member, onClick }) => (
+  <div
+    className="flex flex-col items-center w-[160px] cursor-pointer hover:scale-105 transition-transform duration-200"
+    onClick={onClick}
+  >
+    <div className="bg-red p-1.5 rounded-xl w-full overflow-hidden">
+      <img
+        src={member.image}
+        alt={member.name}
+        className="w-full h-[180px] object-cover rounded-lg"
+      />
+    </div>
+    <h3 className="text-center font-semibold mt-3">{member.name}</h3>
+    <p className="text-center text-red text-sm">{member.title}</p>
+  </div>
+);
 
 export default EBoard;
