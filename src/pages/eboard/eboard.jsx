@@ -1,5 +1,4 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import LayoutWrapper from "../../components/layoutWrapper";
 import MemberOverlay from "./memberOverlay";
 
@@ -70,7 +69,7 @@ const EBoard = () => {
       blurb:
         "Fara is a senior from New Jersey, studying Computer Science, Enginering and Literary Arts. This is her third year on the finance team for WISE and she's excited to get to know the new members! She loves reading, writing, and live music. ",
       email: "",
-      linkedin: "https://www.linkedin.com/in/fara-odunlami/ ",
+      linkedin: "https://www.linkedin.com/in/fara-odunlami/",
       title: "Financial Liaison",
       image: "/people/fara/fara.png",
       extraPhotos: [],
@@ -82,7 +81,7 @@ const EBoard = () => {
       concentration: "Chemical Physics",
       hometown: "Mechanicsburg, PA",
       blurb:
-        "Medha is a senior from central PA studying Chemical Physics at Brown, and she has been a member of WiSE's finance/sponsorship team for three years. She plans on pursuing a PhD in physical/quantum chemistry or nanoengineering and is involved in physics and chemistry research at Brown. She is also a sophomore transfer and always willing to give advice to other TRUE students, especially those who are more undecided about their path at Brown. ",
+        "Medha is a senior from central PA studying Chemical Physics at Brown, and she has been a member of WiSE's finance/sponsorship team for three years. She plans on pursuing a PhD in physical/quantum chemistry or nanoengineering and is involved in physics and chemistry research at Brown. She is also a sophomore transfer and always willing to give advice to other TRUE students, especially those who are more undecided about their path at Brown.",
       email: "medha_gereddy@brown.edu",
       linkedin: "",
       title: "Sponsorship Liaison",
@@ -159,6 +158,64 @@ const EBoard = () => {
       image: "/people/lavanya/lavanya.jpg",
       extraPhotos: [],
     },
+    // ---- NEW MEMBERS ----
+    {
+      name: "Hilary Nguyen",
+      pronouns: "she/her",
+      graduation: "2027",
+      concentration: "Biochemistry and Molecular Biology, Pre-Pharmacy track",
+      hometown: "San Diego, CA",
+      blurb:
+        "Hilary is a junior from San Diego, CA studying Biochemistry on the pre-pharmacy track. Hilary has been involved in WiSE since freshman year, serving as a mentor and now the Mentor-Mentee Coordinator. Outside of WiSE, she enjoys spending time in lab running experiments and chatting with her lab mates, and she also loves to sew, cook/bake, sing, and dance.",
+      email: "hilary_nguyen@brown.edu",
+      linkedin: "https://www.linkedin.com/in/hilary-nguyen-866615261/",
+      title: "Mentor-Mentee Coordinator",
+      image: "/people/hilary/hilary.jpg",
+      extraPhotos: [],
+    },
+    {
+      name: "Ricci Waksman",
+      pronouns: "she/her",
+      graduation: "2028",
+      concentration: "Biomedical Engineering, Entrepreneurship",
+      hometown: "South Africa",
+      blurb:
+        "Ricci is a sophomore from Johannesburg, South Africa studying Biomedical Engineering and Entrepreneurship. In her free time she loves to play the New York Times Games, crochet, and go for boba with friends!",
+      email: "ricci_waksman@brown.edu",
+      linkedin: "www.linkedin.com/in/ricci-waksman-144b78370",
+      title: "Mentor-Mentee Coordinator",
+      image: "/people/ricci/ricci.JPEG",
+      extraPhotos: [],
+    },
+    {
+      name: "Sophia Milausnic",
+      pronouns: "she/her",
+      graduation: "2029",
+      concentration: "Biophysics",
+      hometown: "Reston, Virginia",
+      blurb:
+        "Sophia is a freshman from Northern Virginia who is excited to uplift other women at Brown with fun events and career opportunities. Outside of WiSE, Sophia spends her time playing the bassoon in the Brown University Orchestra, going to the gym, and trying new food spots in Providence.",
+      email: "sophia_milausnic@brown.edu",
+      linkedin: "",
+      title: "Underclassmen Representative",
+      image: "/people/sophia/sophia.jpg",
+      extraPhotos: [],
+    },
+    {
+      name: "Nikoleta Stoynova",
+      pronouns: "she/her",
+      graduation: "2029",
+      concentration: "Mechanical Engineering",
+      hometown: "Kazanlak, Bulgaria",
+      blurb:
+        "Nikoleta is a freshman from Bulgaria, planning to study Mechanical Engineering. Her passion for science has been passed from her mother. She hopes to continue growing the impact WiSE has on women pursuing STEM careers. Outside of STEM, Nikoleta loves playing and watching tennis, photography and travelling.",
+      email: "nikoleta_stoynova@brown.edu",
+      linkedin:
+        "https://www.linkedin.com/in/nikoleta-stoynova-4b0345247?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+      title: "Underclassmen Representative",
+      image: "/people/nikoleta/nikoleta.png",
+      extraPhotos: [],
+    },
   ];
 
   const [selectedMember, setSelectedMember] = useState(null);
@@ -172,7 +229,7 @@ const EBoard = () => {
         Meet the E-Board
       </h1>
 
-      {/* Mobile: 2-column grid | Desktop: custom flex rows */}
+      {/* Mobile layout */}
       <div className="block md:hidden grid grid-cols-2 gap-6 justify-items-center">
         {teamMembers.map((member, index) => (
           <div
@@ -193,9 +250,9 @@ const EBoard = () => {
         ))}
       </div>
 
-      {/* Desktop only: manual rows */}
+      {/* Desktop layout */}
       <div className="hidden lg:flex flex-col gap-12 w-full items-center">
-        {[2, 3, 3, 3]
+        {[2, 3, 3, 3, 4]
           .reduce(
             (acc, len) => {
               const row = teamMembers.slice(acc.offset, acc.offset + len);
@@ -208,11 +265,13 @@ const EBoard = () => {
           .rows.map((row, i) => (
             <div
               key={i}
-              className={`flex gap-8 justify-center ${
+              className={`flex flex-wrap gap-8 justify-center ${
                 row.length === 2
                   ? "max-w-[360px]"
                   : row.length === 3
                   ? "max-w-[560px]"
+                  : row.length === 4
+                  ? "max-w-[760px]"
                   : ""
               }`}
             >
