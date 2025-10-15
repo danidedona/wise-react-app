@@ -3,20 +3,42 @@ import LayoutWrapper from "../components/layoutWrapper";
 
 const MentorMentee = () => {
   const events = [
-    {
-      title: "Tea Talks ☕️",
-      dates: "October 24–26, 2025",
-      description:
-        "Join your mentor or mentee for a cozy Tea Talk! Pick up your voucher and spend some quality time together reflecting on your semester and goals.",
-      milestones: [
-        { date: "October 10", detail: "Sign-up form released" },
-        { date: "October 17", detail: "Deadline to sign up" },
-        { date: "October 18–22", detail: "Voucher pickup window" },
-        { date: "October 24–26", detail: "Tea Talks weekend" },
-      ],
-      formLink: null, // Replace with Google Form link once available
-      image: "/images/tea-talk-placeholder.jpg", // placeholder, you can replace later
-    },
+    // {
+    //   title: "WiSE × Ten One Tea House: Tea Talks 🧋",
+    //   dates: "October 24th – 27th, 2025",
+    //   description:
+    //     "We’re so excited to kick off the semester with WiSE × Ten One Tea House: Tea Talks! 🧋 This is a fun opportunity to meet your mentor or mentee while enjoying free or discounted boba. The first 30 groups to sign up will receive free drinks, and everyone else who signs up by October 22nd will receive a 15% discount!",
+    //   milestones: [
+    //     { date: "October 17 (Friday, 12PM)", detail: "Sign-up form released" },
+    //     { date: "October 22 (Tuesday)", detail: "Deadline to sign up" },
+    //     {
+    //       date: "October 22–23 (Wed–Thurs, 12–3PM)",
+    //       detail: "Voucher pickup at the Blue Room",
+    //     },
+    //     {
+    //       date: "October 24–27 (Fri–Mon)",
+    //       detail: "Tea Talks at Ten One Tea House",
+    //     },
+    //   ],
+    //   formLink:
+    //     "https://docs.google.com/forms/d/e/1FAIpQLSc50WtJnRMhaNQWh55Iirxgb0nnrIDIYFNTrj6CupCLO6efOQ/viewform",
+    //   image: "/events/fall-2025-tea-talks/background.png",
+    //   details: {
+    //     location: "Ten One Tea House",
+    //     time: "During Ten One’s operating hours",
+    //     rules: [
+    //       "You must attend as a mentor–mentee pair or group (at least one mentee must be present).",
+    //       "Both mentor(s) and mentee(s) must sign up after agreeing on a meeting time.",
+    //       "Only one person per group needs to pick up vouchers at the Blue Room (Oct 22–23, 12–3PM).",
+    //       "Each attendee must bring their physical voucher to redeem the offer.",
+    //       "Take a selfie or group photo at Ten One and upload it via the feedback form after your meetup!",
+    //     ],
+    //     afterEvent:
+    //       "All mentors and mentees are required to fill out the post–Tea Talk feedback form and upload their photo. Feel free to tag @WiSE_BrownU and @tenoneteahouse on Instagram — we’d love to see your posts!",
+    //     contact:
+    //       "If you have any trouble connecting with your mentor or mentee, please email us at wise@brown.edu.",
+    //   },
+    // },
   ];
 
   return (
@@ -42,7 +64,7 @@ const MentorMentee = () => {
       </div>
 
       {/* Upcoming Events Section */}
-      {/* <section className="mt-20 px-4 max-w-6xl mx-auto">
+      <section className="mt-20 px-4 max-w-6xl mx-auto">
         <h2
           className="text-3xl sm:text-4xl font-bold text-center mb-12"
           style={{ fontFamily: "'Atteron', serif" }}
@@ -100,7 +122,7 @@ const MentorMentee = () => {
             </div>
           ))}
         </div>
-      </section> */}
+      </section>
 
       {/* Deadline Notice */}
       {/* <div className="max-w-2xl mx-auto bg-red text-white text-center rounded-lg py-4 px-6 mt-10 shadow-md">
