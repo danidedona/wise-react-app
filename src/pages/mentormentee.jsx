@@ -10,7 +10,7 @@ const MentorMentee = () => {
         "We’re so excited to kick off the semester with WiSE × Ten One Tea House: Tea Talks! 🧋 This is a fun opportunity to meet your mentor or mentee while enjoying free or discounted boba. The first 30 groups to sign up will receive free drinks, and everyone else who signs up by October 22nd will receive a 15% discount!",
       milestones: [
         { date: "October 17 (Friday, 12PM)", detail: "Sign-up form released" },
-        { date: "October 22 (Tuesday)", detail: "Deadline to sign up" },
+        { date: "October 21 (Tuesday)", detail: "Deadline to sign up" },
         {
           date: "October 22–23 (Wed–Thurs, 12–3PM)",
           detail: "Voucher pickup at the Blue Room",
