@@ -3,42 +3,42 @@ import LayoutWrapper from "../components/layoutWrapper";
 
 const MentorMentee = () => {
   const events = [
-    // {
-    //   title: "WiSE × Ten One Tea House: Tea Talks 🧋",
-    //   dates: "October 24th – 27th, 2025",
-    //   description:
-    //     "We’re so excited to kick off the semester with WiSE × Ten One Tea House: Tea Talks! 🧋 This is a fun opportunity to meet your mentor or mentee while enjoying free or discounted boba. The first 30 groups to sign up will receive free drinks, and everyone else who signs up by October 22nd will receive a 15% discount!",
-    //   milestones: [
-    //     { date: "October 17 (Friday, 12PM)", detail: "Sign-up form released" },
-    //     { date: "October 22 (Tuesday)", detail: "Deadline to sign up" },
-    //     {
-    //       date: "October 22–23 (Wed–Thurs, 12–3PM)",
-    //       detail: "Voucher pickup at the Blue Room",
-    //     },
-    //     {
-    //       date: "October 24–27 (Fri–Mon)",
-    //       detail: "Tea Talks at Ten One Tea House",
-    //     },
-    //   ],
-    //   formLink:
-    //     "https://docs.google.com/forms/d/e/1FAIpQLSc50WtJnRMhaNQWh55Iirxgb0nnrIDIYFNTrj6CupCLO6efOQ/viewform",
-    //   image: "/events/fall-2025-tea-talks/background.png",
-    //   details: {
-    //     location: "Ten One Tea House",
-    //     time: "During Ten One’s operating hours",
-    //     rules: [
-    //       "You must attend as a mentor–mentee pair or group (at least one mentee must be present).",
-    //       "Both mentor(s) and mentee(s) must sign up after agreeing on a meeting time.",
-    //       "Only one person per group needs to pick up vouchers at the Blue Room (Oct 22–23, 12–3PM).",
-    //       "Each attendee must bring their physical voucher to redeem the offer.",
-    //       "Take a selfie or group photo at Ten One and upload it via the feedback form after your meetup!",
-    //     ],
-    //     afterEvent:
-    //       "All mentors and mentees are required to fill out the post–Tea Talk feedback form and upload their photo. Feel free to tag @WiSE_BrownU and @tenoneteahouse on Instagram — we’d love to see your posts!",
-    //     contact:
-    //       "If you have any trouble connecting with your mentor or mentee, please email us at wise@brown.edu.",
-    //   },
-    // },
+    {
+      title: "WiSE × Ten One Tea House: Tea Talks 🧋",
+      dates: "October 24th – 27th, 2025",
+      description:
+        "We’re so excited to kick off the semester with WiSE × Ten One Tea House: Tea Talks! 🧋 This is a fun opportunity to meet your mentor or mentee while enjoying free or discounted boba. The first 30 groups to sign up will receive free drinks, and everyone else who signs up by October 22nd will receive a 15% discount!",
+      milestones: [
+        { date: "October 17 (Friday, 12PM)", detail: "Sign-up form released" },
+        { date: "October 22 (Tuesday)", detail: "Deadline to sign up" },
+        {
+          date: "October 22–23 (Wed–Thurs, 12–3PM)",
+          detail: "Voucher pickup at the Blue Room",
+        },
+        {
+          date: "October 24–27 (Fri–Mon)",
+          detail: "Tea Talks at Ten One Tea House",
+        },
+      ],
+      formLink:
+        "https://docs.google.com/forms/d/e/1FAIpQLSc50WtJnRMhaNQWh55Iirxgb0nnrIDIYFNTrj6CupCLO6efOQ/viewform",
+      image: "/events/fall-2025-tea-talks/background.png",
+      details: {
+        location: "Ten One Tea House",
+        time: "During Ten One’s operating hours",
+        rules: [
+          "You must attend as a mentor–mentee pair or group (at least one mentee must be present).",
+          "Both mentor(s) and mentee(s) must sign up after agreeing on a meeting time.",
+          "Only one person per group needs to pick up vouchers at the Blue Room (Oct 22–23, 12–3PM).",
+          "Each attendee must bring their physical voucher to redeem the offer.",
+          "Take a selfie or group photo at Ten One and upload it via the feedback form after your meetup!",
+        ],
+        afterEvent:
+          "All mentors and mentees are required to fill out the post–Tea Talk feedback form and upload their photo. Feel free to tag @WiSE_BrownU and @tenoneteahouse on Instagram — we’d love to see your posts!",
+        contact:
+          "If you have any trouble connecting with your mentor or mentee, please email us at wise@brown.edu.",
+      },
+    },
   ];
 
   return (
