@@ -3,8 +3,8 @@ export default {
   title: "Resumes and LinkedIn Workshop with Career Center", // ADD FALL 2025
   date: "October 30th, 2025",
   time: "6:00 PM - 7:00 PM",
-  location: "Career Center",
-  // link: "/events/fall-2025-wise-x-brown-research-club",
+  location: "Career Center, 167 Angell St.",
+  // link: "/events/fall-2025-wise-x-career-center",
   coverImage: "/events/fall-2025-wise-x-career-center.png",
   flier: "/events/fall-2025-wise-x-career-center/flier.png",
   description:
