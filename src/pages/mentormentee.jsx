@@ -6,6 +6,7 @@ const MentorMentee = () => {
     {
       title: "WiSE × Ten One Tea House: Tea Talks 🧋",
       dates: "October 24th – 27th, 2025",
+      endDate: "2025-10-27",
       description:
         "We’re so excited to kick off the semester with WiSE × Ten One Tea House: Tea Talks! 🧋 This is a fun opportunity to meet your mentor or mentee while enjoying free or discounted boba. The first 30 groups to sign up will receive free drinks, and everyone else who signs up by October 22nd will receive a 15% discount!",
       milestones: [
@@ -73,54 +74,79 @@ const MentorMentee = () => {
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-          {events.map((event, index) => (
-            <div
-              key={index}
-              className="bg-white border border-gray-200 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
-            >
-              <img
-                src={event.image}
-                alt={event.title}
-                className="w-full h-56 object-cover"
-              />
-              <div className="p-6 space-y-4">
-                <h3
-                  className="text-2xl font-semibold text-gray-800"
-                  style={{ fontFamily: "'Lora', serif" }}
-                >
-                  {event.title}
-                </h3>
-                <p className="text-gray-600 text-sm">{event.dates}</p>
-                <p className="text-gray-700">{event.description}</p>
+          {events.map((event, index) => {
+            const isPast =
+              event.endDate && new Date(event.endDate) < new Date();
 
-                <ul className="text-sm text-gray-600 space-y-1 mt-4">
-                  {event.milestones.map((m, i) => (
-                    <li key={i}>
-                      <span className="font-semibold">{m.date}:</span>{" "}
-                      {m.detail}
-                    </li>
-                  ))}
-                </ul>
+            return (
+              <div
+                key={index}
+                className="relative border border-gray-200 rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl"
+                style={{ isolation: "isolate" }} // prevents header overlap
+              >
+                {/* Pink diagonal banner — stays colorful, above overlay */}
+                {isPast && (
+                  <div className="absolute top-4 right-[-45px] z-20 rotate-45 bg-[#f2c2c2] text-black text-[10px] sm:text-xs font-semibold py-1 px-10 shadow-md">
+                    <span className="hidden sm:inline">Event Ended</span>
+                    <span className="sm:hidden">Past Event</span>
+                  </div>
+                )}
 
-                <div className="mt-6 text-center">
-                  {event.formLink ? (
-                    <a
-                      href={event.formLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-block bg-[#f2c2c2] hover:bg-[#eca7a7] text-black font-semibold px-6 py-3 rounded-lg shadow-md transition-all"
-                    >
-                      Sign Up
-                    </a>
-                  ) : (
-                    <span className="inline-block border-2 border-gray-400 text-gray-500 font-semibold px-6 py-3 rounded-lg cursor-not-allowed">
-                      Sign-up form coming soon
-                    </span>
+                {/* Grayscale wrapper (all content) */}
+                <div className={isPast ? "grayscale relative" : "relative"}>
+                  {/* Soft grey wash overlay */}
+                  {isPast && (
+                    <div className="absolute inset-0 bg-gray-100/60 z-10 pointer-events-none"></div>
                   )}
+
+                  <img
+                    src={event.image}
+                    alt={event.title}
+                    className="w-full h-56 object-cover"
+                  />
+
+                  <div className="p-6 space-y-4 relative z-0">
+                    <h3
+                      className="text-2xl font-semibold text-gray-800"
+                      style={{ fontFamily: "'Lora', serif" }}
+                    >
+                      {event.title}
+                    </h3>
+                    <p className="text-gray-600 text-sm">{event.dates}</p>
+                    <p className="text-gray-700">{event.description}</p>
+
+                    <ul className="text-sm text-gray-600 space-y-1 mt-4">
+                      {event.milestones.map((m, i) => (
+                        <li key={i}>
+                          <span className="font-semibold">{m.date}:</span>{" "}
+                          {m.detail}
+                        </li>
+                      ))}
+                    </ul>
+
+                    {!isPast && (
+                      <div className="mt-6 text-center">
+                        {event.formLink ? (
+                          <a
+                            href={event.formLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-block bg-[#f2c2c2] hover:bg-[#eca7a7] text-black font-semibold px-6 py-3 rounded-lg shadow-md transition-all"
+                          >
+                            Sign Up
+                          </a>
+                        ) : (
+                          <span className="inline-block border-2 border-gray-400 text-gray-500 font-semibold px-6 py-3 rounded-lg cursor-not-allowed">
+                            Sign-up form coming soon
+                          </span>
+                        )}
+                      </div>
+                    )}
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </section>
 

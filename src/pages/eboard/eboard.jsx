@@ -183,7 +183,7 @@ const EBoard = () => {
       email: "ricci_waksman@brown.edu",
       linkedin: "www.linkedin.com/in/ricci-waksman-144b78370",
       title: "Mentor-Mentee Coordinator",
-      image: "/people/ricci/ricci.jpg",
+      image: "/people/ricci/ricci.png",
       extraPhotos: [],
     },
     {
@@ -212,7 +212,7 @@ const EBoard = () => {
       linkedin:
         "https://www.linkedin.com/in/nikoleta-stoynova-4b0345247?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
       title: "Underclassmen Representative",
-      image: "/people/nikoleta/nikoleta.jpg",
+      image: "/people/nikoleta/nikoleta.png",
       extraPhotos: [],
     },
   ];
