@@ -3,7 +3,7 @@ export default {
   title: "Course Registration Drop-In Hours",
   date: "November 9th, 2025",
   time: "4:00 PM - 6:00 PM",
-  location: "The Underground",
+  location: "Kassar Foxboro Auditorium",
   // link: "/events/fall-2025-wise-x-career-center",
   coverImage: "/events/fall-2025-course-registration-hours.png",
   flier: "/events/fall-2025-course-registration-hours/flier.png",
