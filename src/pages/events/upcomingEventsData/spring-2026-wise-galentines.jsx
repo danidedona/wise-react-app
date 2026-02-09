@@ -1,5 +1,5 @@
 export default {
-  index: 11,
+  index: 0,
   title: "WiSE Galentine's",
   date: "February 13th, 2026",
   time: "6:30 PM - 8:00 PM",
