@@ -1,13 +1,13 @@
 export default {
-  index: 0,
-  title: "Wip x WiSE x Astro Club Stargazing",
-  date: "December 8th, 2025",
-  time: "6:00 PM",
-  location:
-    "Barus and Holley 723/724 (take the elevators from the Barus and Holley Lobby, not from the ERC/Hazeltine Commons)",
-  // link: "/events/fall-2025-wip-x-wise-x-astroclub",
-  coverImage: "/events/fall-2025-wip-x-wise-x-astroclub/flier.png",
-  flier: "/events/fall-2025-wip-x-wise-x-astroclub/flier.png",
-  description: "Come stargaze and enjoy hot chocolate on a clear night!",
-  imageFolder: "/events/fall-2025-wip-x-wise-x-astroclub",
+  index: 11,
+  title: "WiSE Galentine's",
+  date: "February 13th, 2026",
+  time: "6:30 PM - 8:00 PM",
+  location: "Petteruti Lounge",
+  link: "/events/spring-2026-wise-galentines",
+  coverImage: "/events/spring-2026-wise-galentines/flier.png",
+  flier: "/events/spring-2026-wise-galentines/flier.png",
+  description:
+    "Welcome back WiSE! Join us for our first event of the semester - Galentine's Social!",
+  imageFolder: "/events/spring-2026-wise-galentines",
 };
