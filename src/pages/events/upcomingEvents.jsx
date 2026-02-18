@@ -28,13 +28,13 @@ const UpcomingEvents = () => {
       key={index}
       className="bg-lightPink rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col items-center p-6 text-center max-w-[360px] w-full"
     >
-      <a href={event.link} className="w-full mb-4">
+      <div className="aspect-square w-full max-w-[300px] overflow-hidden rounded-md">
         <img
           src={event.flier}
           alt={event.title}
-          className="w-full max-h-[400px] object-contain rounded-md hover:scale-105 transition-transform duration-200"
+          className="w-full h-full object-cover transition-transform duration-200 hover:scale-105"
         />
-      </a>
+      </div>
 
       <h2 className="text-2xl font-semibold mb-2">{event.title}</h2>
 

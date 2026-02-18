@@ -4,6 +4,24 @@ import LayoutWrapper from "../components/layoutWrapper";
 const MentorMentee = () => {
   const events = [
     {
+      title: "Mentor-Mentee Study Cafe",
+      dates: "March 8th, 3–5 PM",
+      endDate: "2026-03-08",
+      description:
+        "Join us for our Mentor-Mentee Study Cafe! Drop by anytime between 3–5 PM in the Underground for donuts, coffee, and hot chocolate. This is a relaxed space to study together, catch up, and connect with your mentor or mentee.",
+      info: [
+        { label: "Location", value: "The Underground" },
+        { label: "Time", value: "3:00–5:00 PM" },
+        {
+          label: "Food",
+          value: "Donuts, coffee, and hot chocolate provided",
+        },
+        { label: "Who", value: "Open to all mentors and mentees" },
+        { label: "RSVP", value: "No RSVP required — drop in anytime!" },
+      ],
+      image: "/images/temp-coffee.png",
+    },
+    {
       title: "WiSE × Ten One Tea House: Tea Talks 🧋",
       dates: "October 24th – 27th, 2025",
       endDate: "2025-10-27",
@@ -24,21 +42,6 @@ const MentorMentee = () => {
       formLink:
         "https://docs.google.com/forms/d/e/1FAIpQLSc50WtJnRMhaNQWh55Iirxgb0nnrIDIYFNTrj6CupCLO6efOQ/viewform",
       image: "/events/fall-2025-tea-talks/background.png",
-      details: {
-        location: "Ten One Tea House",
-        time: "During Ten One’s operating hours",
-        rules: [
-          "You must attend as a mentor–mentee pair or group (at least one mentee must be present).",
-          "Both mentor(s) and mentee(s) must sign up after agreeing on a meeting time.",
-          "Only one person per group needs to pick up vouchers at the Blue Room (Oct 22–23, 12–3PM).",
-          "Each attendee must bring their physical voucher to redeem the offer.",
-          "Take a selfie or group photo at Ten One and upload it via the feedback form after your meetup!",
-        ],
-        afterEvent:
-          "All mentors and mentees are required to fill out the post–Tea Talk feedback form and upload their photo. Feel free to tag @WiSE_BrownU and @tenoneteahouse on Instagram — we’d love to see your posts!",
-        contact:
-          "If you have any trouble connecting with your mentor or mentee, please email us at wise@brown.edu.",
-      },
     },
   ];
 
@@ -82,9 +85,9 @@ const MentorMentee = () => {
               <div
                 key={index}
                 className="relative border border-gray-200 rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl"
-                style={{ isolation: "isolate" }} // prevents header overlap
+                style={{ isolation: "isolate" }}
               >
-                {/* Pink diagonal banner — stays colorful, above overlay */}
+                {/* Past Event Banner */}
                 {isPast && (
                   <div className="absolute top-4 right-[-45px] z-20 rotate-45 bg-[#f2c2c2] text-black text-[10px] sm:text-xs font-semibold py-1 px-10 shadow-md">
                     <span className="hidden sm:inline">Event Ended</span>
@@ -92,9 +95,8 @@ const MentorMentee = () => {
                   </div>
                 )}
 
-                {/* Grayscale wrapper (all content) */}
                 <div className={isPast ? "grayscale relative" : "relative"}>
-                  {/* Soft grey wash overlay */}
+                  {/* Grey wash overlay */}
                   {isPast && (
                     <div className="absolute inset-0 bg-gray-100/60 z-10 pointer-events-none"></div>
                   )}
@@ -112,34 +114,45 @@ const MentorMentee = () => {
                     >
                       {event.title}
                     </h3>
+
                     <p className="text-gray-600 text-sm">{event.dates}</p>
                     <p className="text-gray-700">{event.description}</p>
 
-                    <ul className="text-sm text-gray-600 space-y-1 mt-4">
-                      {event.milestones.map((m, i) => (
-                        <li key={i}>
-                          <span className="font-semibold">{m.date}:</span>{" "}
-                          {m.detail}
-                        </li>
-                      ))}
-                    </ul>
+                    {/* Info List (Study Cafe style) */}
+                    {event.info && (
+                      <ul className="text-sm text-gray-700 space-y-2 mt-4">
+                        {event.info.map((item, i) => (
+                          <li key={i}>
+                            <span className="font-semibold">{item.label}:</span>{" "}
+                            {item.value}
+                          </li>
+                        ))}
+                      </ul>
+                    )}
 
-                    {!isPast && (
+                    {/* Milestones (Tea Talks style) */}
+                    {event.milestones && (
+                      <ul className="text-sm text-gray-600 space-y-1 mt-4">
+                        {event.milestones.map((m, i) => (
+                          <li key={i}>
+                            <span className="font-semibold">{m.date}:</span>{" "}
+                            {m.detail}
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+
+                    {/* Sign-up button only if formLink exists */}
+                    {!isPast && event.formLink && (
                       <div className="mt-6 text-center">
-                        {event.formLink ? (
-                          <a
-                            href={event.formLink}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-block bg-[#f2c2c2] hover:bg-[#eca7a7] text-black font-semibold px-6 py-3 rounded-lg shadow-md transition-all"
-                          >
-                            Sign Up
-                          </a>
-                        ) : (
-                          <span className="inline-block border-2 border-gray-400 text-gray-500 font-semibold px-6 py-3 rounded-lg cursor-not-allowed">
-                            Sign-up form coming soon
-                          </span>
-                        )}
+                        <a
+                          href={event.formLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-block bg-[#f2c2c2] hover:bg-[#eca7a7] text-black font-semibold px-6 py-3 rounded-lg shadow-md transition-all"
+                        >
+                          Sign Up
+                        </a>
                       </div>
                     )}
                   </div>
