@@ -7,6 +7,7 @@ export default {
   // link: "/events/spring-2026-wise-headshots",
   coverImage: "/events/spring-2026-wise-opportunity-fair/flier.png",
   flier: "/events/spring-2026-wise-opportunity-fair/flier.png",
-  description: "Join us for ",
+  description:
+    "The WiSE Opportunity Fair is the perfect chance to learn about various STEM organizations and opportunities across campus. Whether you're looking to network with other women in STEM or trying to figure out how to finally get involved in research, this event is designed to help you navigate your path in the field!",
   imageFolder: "/events/spring-2026-wise-opportunity-fair",
 };

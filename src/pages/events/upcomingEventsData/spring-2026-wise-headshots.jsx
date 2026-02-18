@@ -8,6 +8,6 @@ export default {
   coverImage: "/events/spring-2026-wise-headshots/flier.jpg",
   flier: "/events/spring-2026-wise-headshots/flier.jpg",
   description:
-    "Need a new headshot? Come to our WiSE Headshots event and get a professional photo taken for free!",
+    "Need a new headshot? We've got you covered. We're offering free professional photos again — make sure you sign up for a time slot HERE! Space is limited, so do it sooner than later. If you can't commit to a time, we'll be taking walk-ins for the final 30 minutes. Can't wait to see all your beautiful LinkedIn photos!",
   imageFolder: "/events/spring-2026-wise-headshots",
 };
