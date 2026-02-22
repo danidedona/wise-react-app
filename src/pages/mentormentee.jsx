@@ -5,7 +5,7 @@ const MentorMentee = () => {
   const events = [
     {
       title: "Mentor-Mentee Study Cafe",
-      dates: "March 8th, 3–5 PM",
+      dates: "March 8th 2026, 3–5 PM",
       endDate: "2026-03-08",
       description:
         "Join us for our Mentor-Mentee Study Cafe! Drop by anytime between 3–5 PM in the Underground for donuts, coffee, and hot chocolate. This is a relaxed space to study together, catch up, and connect with your mentor or mentee.",
