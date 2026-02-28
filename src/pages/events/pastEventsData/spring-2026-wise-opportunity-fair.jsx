@@ -1,10 +1,10 @@
 export default {
-  index: 1,
-  title: "WiSE Opportunity Fair",
+  index: 14,
+  title: "Spring 2026 WiSE Opportunity Fair",
   date: "February 28th, 2026",
   time: "1:00 PM - 3:00 PM",
   location: "Petterutti Lounge",
-  // link: "/events/spring-2026-wise-headshots",
+  link: "/events/spring-2026-wise-opportunity-fair",
   coverImage: "/events/spring-2026-wise-opportunity-fair/flier.png",
   flier: "/events/spring-2026-wise-opportunity-fair/flier.png",
   description:
