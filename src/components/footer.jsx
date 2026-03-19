@@ -4,7 +4,7 @@ const Footer = () => {
   const [showFull, setShowFull] = useState(false);
 
   return (
-    <footer className="bg-lightPink text-gray-700 px-6 py-6 mt-12 border-t-4 border-red">
+    <footer className="bg-lightPink text-gray-700 px-6 py-6 border-t-4 border-red">
       <div className="max-w-5xl mx-auto space-y-6">
         {/* Mobile condensed disclaimer */}
         <div className="block md:hidden text-[10px] leading-snug">

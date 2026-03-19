@@ -19,44 +19,6 @@ const App = () => {
   // -----------------------------------------------------------
   // CURRENT POPUP
   // -----------------------------------------------------------
-  const [showPopup, setShowPopup] = useState(false);
-  const [showOverlay, setShowOverlay] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
-  const location = useLocation();
-
-  // Show popup on home page
-  useEffect(() => {
-    if (location.pathname === "/") {
-      setTimeout(() => {
-        setShowPopup(true);
-        setShowOverlay(true);
-      }, 2000);
-    }
-  }, [location.pathname]);
-
-  // Detect screen size
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 640);
-    };
-
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  const dismissPopup = () => {
-    setShowPopup(false);
-    setShowOverlay(false);
-  };
-
-  const shouldShowBanner = location.pathname !== "/eboard-applications";
-
-  // -----------------------------------------------------------
-  // CURRENT POPUP
-  // -----------------------------------------------------------
-
-  // ----------- FOR GALA -----------
   // const [showPopup, setShowPopup] = useState(false);
   // const [showOverlay, setShowOverlay] = useState(false);
   // const [isMobile, setIsMobile] = useState(false);
@@ -88,8 +50,46 @@ const App = () => {
   //   setShowOverlay(false);
   // };
 
-  // const shouldShowBanner =
-  //   location.pathname !== "/spring-conference-2025" && !isMobile;
+  // const shouldShowBanner = location.pathname !== "/eboard-applications";
+
+  // -----------------------------------------------------------
+  // CURRENT POPUP
+  // -----------------------------------------------------------
+
+  // ----------- FOR GALA -----------
+  const [showPopup, setShowPopup] = useState(false);
+  const [showOverlay, setShowOverlay] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+  const location = useLocation();
+
+  // Show popup on home page
+  useEffect(() => {
+    if (location.pathname === "/") {
+      setTimeout(() => {
+        setShowPopup(true);
+        setShowOverlay(true);
+      }, 2000);
+    }
+  }, [location.pathname]);
+
+  // Detect screen size
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 640);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const dismissPopup = () => {
+    setShowPopup(false);
+    setShowOverlay(false);
+  };
+
+  const shouldShowBanner =
+    location.pathname !== "/spring-conference-2026" && !isMobile;
   // ----------- FOR GALA -----------
 
   return (
@@ -101,12 +101,12 @@ const App = () => {
       <main className="mt-32 flex-grow">
         {/* ----------- FOR GALA ----------- */}
         {/* Overlay */}
-        {/* {showOverlay && (
+        {showOverlay && (
           <div className="fixed inset-0 bg-black bg-opacity-50 z-40"></div>
-        )} */}
+        )}
 
         {/* Popup */}
-        {/* {showPopup && (
+        {showPopup && (
           <div
             className="fixed top-0 left-0 right-0 bottom-0 bg-black bg-opacity-50 z-40"
             onClick={dismissPopup}
@@ -125,18 +125,26 @@ const App = () => {
               <p className="font-bold text-lg mb-6 text-center">
                 Spring Conference Event Countdown!
               </p>
-              <Countdown time="2025-04-19T15:00:00Z" />
+              <Countdown time="2026-04-11T17:30:00Z" />
               <div className="mt-4 flex justify-between items-center">
                 <a
-                  href="/spring-conference-2025"
+                  href="/spring-conference-2026"
                   className="text-black px-4 py-2 rounded hover:text-red bg-lightPink mx-auto"
                 >
                   See Spring Conference Details
                 </a>
               </div>
+              <div className="mt-4 flex justify-between items-center">
+                <a
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSe8K-kBrXnu4r3aesyn9irjKLMWrqqdXsaxQO-BtHrk-0zHqQ/viewform"
+                  className="text-black px-4 py-2 rounded hover:text-red bg-lightPink mx-auto"
+                >
+                  RSVP
+                </a>
+              </div>
             </div>
           </div>
-        )} */}
+        )}
         {/* ----------- FOR GALA ----------- */}
 
         {/* ----------- FOR CURRENT POPUP ----------- */}
@@ -208,7 +216,7 @@ const App = () => {
           <Route path="/events/:slug" element={<SingleEvent />} />
           <Route path="/upcoming-events" element={<UpcomingEvents />} />
           <Route
-            path="/spring-conference-2025"
+            path="/spring-conference-2026"
             element={<SpringConference />}
           />
           <Route path="/newsletter" element={<Newsletter />} />
@@ -235,16 +243,16 @@ const App = () => {
 
         {/* ----------- FOR GALA ----------- */}
         {/* Banner after popup is dismissed */}
-        {/* {shouldShowBanner && !showPopup && (
+        {shouldShowBanner && !showPopup && (
           <div className="fixed bottom-4 right-4 bg-red text-white px-4 py-2 rounded shadow-lg transform transition-transform duration-200 hover:scale-105">
             <a
-              href="/spring-conference-2025"
+              href="/spring-conference-2026"
               className="text-xl text-white hover:text-white"
             >
               See Spring Conference Details!
             </a>
           </div>
-        )} */}
+        )}
         {/* ----------- FOR GALA ----------- */}
       </main>
       <Footer />

@@ -50,10 +50,10 @@ const Events = () => {
             className="h-32 mb-4"
           />
           <a
-            href="/spring-conference-2025"
+            href="/spring-conference-2026"
             className="bg-medPink text-black py-3 px-6 sm:px-8 rounded-xl text-2xl sm:text-4xl font-semibold hover:text-red transition"
           >
-            Spring Conference 2025
+            Spring Conference 2026
           </a>
         </div>
       </div>

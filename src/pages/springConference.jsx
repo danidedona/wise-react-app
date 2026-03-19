@@ -4,18 +4,21 @@ import LayoutWrapper from "../components/layoutWrapper";
 
 const SpringConference = () => {
   return (
-    <LayoutWrapper>
+    <div
+      className="flex flex-col items-center min-h-screen w-screen px-4 sm:px-10 md:px-20 lg:px-36 sm:pt-2 md:pt-20 lg:pt-20"
+      style={{ fontFamily: "'Atteron', serif" }}
+    >
       <div className="text-center">
         <h1 className="text-lg sm:text-2xl font-bold text-black">
           Women in Science & Engineering Presents
         </h1>
         <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl pt-6 sm:pt-10 font-bold text-red">
-          2025 Spring Conference
+          2026 Spring Conference
         </h1>
 
         <p className="mt-6 sm:mt-10 text-base sm:text-lg text-black">
-          We are one week away from 📣 2025 Women in Science and Engineering
-          Spring Conference 🧬!
+          We are close to the 2026 Women in Science and Engineering Spring
+          Conference!
         </p>
 
         <p className="mt-4 sm:mt-5 text-base sm:text-lg text-black">
@@ -24,11 +27,19 @@ const SpringConference = () => {
           undergraduate and graduate students to connect with professionals,
           faculty, and peers in STEM.
         </p>
+
+        {/* Quick Link to RSVP */}
+        <a
+          href="#rsvp"
+          className="inline-block mt-8 bg-lightPink text-black px-8 py-3 rounded-full font-bold text-lg hover:text-red transition-colors"
+        >
+          Register Now
+        </a>
       </div>
 
       <section className="mt-10 text-xl font-semibold text-center text-red">
         <p className="mb-6">Get ready as we count down to the Conference...</p>
-        <Countdown time="2025-04-19T15:00:00Z" />
+        <Countdown time="2026-04-11T17:30:00Z" />
       </section>
 
       <section className="bg-red w-screen p-8 mb-14 mt-12">
@@ -40,20 +51,18 @@ const SpringConference = () => {
           </div>
           <div className="text-white text-lg text-left">
             <p className="mb-2">
-              <strong>Date:</strong> Saturday, April 19, 2025
+              <strong>Date:</strong> Saturday, April 11, 2026
             </p>
             <p className="mb-2">
-              <strong>Time:</strong> 3:00 PM - 7:30 PM
+              <strong>Time:</strong> 5:30 PM - 8:00 PM
             </p>
             <p className="mb-2">
-              <strong>Location:</strong> Hazeltine Commons, Barus & Holley
+              <strong>Location:</strong> Petteruti Lounge + Leung Gallery
             </p>
             <p className="mb-2">
-              <strong>Dress Code:</strong> Business Casual
+              <strong>Attire:</strong> Business Casual
             </p>
-            <p className="mb-2">
-              🍜 Dinner will be provided + 🤫 FREE Merch + BIRB raffle
-            </p>
+            <p className="mb-2">Free dinner and merch will be provided!</p>
           </div>
         </div>
       </section>
@@ -65,17 +74,9 @@ const SpringConference = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 text-black text-lg">
           <div className="space-y-6">
             {[
-              ["2:00 - 3:00 PM", "Setup"],
-              ["3:00 - 3:15 PM", "Arrival"],
-              [
-                "3:15 - 3:30 PM",
-                "Opening Keynote – Michelle Vick (Postdoctoral Researcher in Physics)",
-              ],
-              ["3:45 - 4:30 PM", "Academic Staff Panels"],
-              [
-                "4:45 - 5:30 PM",
-                '"In Conversation With..." Sessions in Barus & Holley breakout rooms',
-              ],
+              ["5:30 - 6:00 PM", "Doors Open"],
+              ["6:00 - 6:15 PM", "Opening Keynote Speaker"],
+              ["6:15 - 7:00 PM", "Dinner"],
             ].map(([time, description], i) => (
               <div key={i} className="flex items-start gap-6">
                 <span className="w-[160px] text-right text-xl font-bold shrink-0">
@@ -88,10 +89,8 @@ const SpringConference = () => {
 
           <div className="space-y-6">
             {[
-              ["5:30 - 8:00 PM", "Networking Dinner"],
-              ["5:45 - 6:30 PM", "Structured Networking"],
-              ["6:30 - 7:00 PM", "Dinner"],
-              ["7:00 - 7:30 PM", "Closing Keynote & Raffle"],
+              ["7:00 - 7:45 PM", "Structured Networking"],
+              ["7:45 - 8:00 PM", "Closing Keynote Speaker: Dean Megan Russel"],
             ].map(([time, description], i) => (
               <div key={i} className="flex items-start gap-6">
                 <span className="w-[160px] text-right text-xl font-bold shrink-0">
@@ -104,16 +103,40 @@ const SpringConference = () => {
         </div>
       </section>
 
-      <section className="w-screen mb-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
-          {/* LEFT - Faculty */}
-          <div className="bg-lightPink p-8 px-20 w-full">
+      {/* RSVP Section */}
+      <section id="rsvp" className="w-full max-w-2xl mb-20 mx-auto px-4">
+        <h2 className="text-4xl font-bold text-red mb-4 text-center">RSVP</h2>
+        <p className="text-center mb-8 text-black italic">
+          Please fill out the form below to secure your spot.
+        </p>
+
+        {/* Container for the form */}
+        <div className="w-full bg-white rounded-xl overflow-hidden shadow-sm">
+          <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLSe8K-kBrXnu4r3aesyn9irjKLMWrqqdXsaxQO-BtHrk-0zHqQ/viewform?embedded=true"
+            width="100%"
+            height="1300" // Increased height to show the whole form
+            frameBorder="0"
+            marginHeight="0"
+            marginWidth="0"
+            scrolling="no" // This tells the browser not to show a scrollbar inside the frame
+            className="rounded-xl"
+          >
+            Loading…
+          </iframe>
+        </div>
+      </section>
+
+      {/* <section className="w-screen">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-0"> */}
+      {/* LEFT - Faculty */}
+      {/* <div className="bg-lightPink p-8 px-20 w-full">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-2xl font-semibold text-black mb-6">
                 Faculty in Attendance
-              </h2>
-              {/* Future of Tech and Sustainability */}
-              <div className="mb-6">
+              </h2> */}
+      {/* Future of Tech and Sustainability */}
+      {/* <div className="mb-6">
                 <h3 className="font-semibold text-black text-lg mb-2">
                   Future of Tech and Sustainability
                 </h3>
@@ -138,10 +161,10 @@ const SpringConference = () => {
                     </p>
                   </li>
                 </ul>
-              </div>
+              </div> */}
 
-              {/* Power of Representation */}
-              <div className="mb-6">
+      {/* Power of Representation */}
+      {/* <div className="mb-6">
                 <h3 className="font-semibold text-black text-lg mb-2">
                   Power of Representation
                 </h3>
@@ -171,10 +194,10 @@ const SpringConference = () => {
                     </p>
                   </li>
                 </ul>
-              </div>
+              </div> */}
 
-              {/* Navigating Medical School */}
-              <div className="mb-6">
+      {/* Navigating Medical School */}
+      {/* <div className="mb-6">
                 <h3 className="font-semibold text-black text-lg mb-2">
                   Navigating Medical School
                 </h3>
@@ -196,10 +219,10 @@ const SpringConference = () => {
                     <p className="text-sm text-gray-700">Medical Student</p>
                   </li>
                 </ul>
-              </div>
+              </div> */}
 
-              {/* Non-Traditional STEM Careers */}
-              <div className="mb-6">
+      {/* Non-Traditional STEM Careers */}
+      {/* <div className="mb-6">
                 <h3 className="font-semibold text-black text-lg mb-2">
                   Non-Traditional STEM Careers
                 </h3>
@@ -215,10 +238,10 @@ const SpringConference = () => {
                     <p className="text-sm text-gray-700">[Role Not Provided]</p>
                   </li>
                 </ul>
-              </div>
+              </div> */}
 
-              {/* Global Perspectives */}
-              <div className="mb-6">
+      {/* Global Perspectives */}
+      {/* <div className="mb-6">
                 <h3 className="font-semibold text-black text-lg mb-2">
                   Global Perspectives
                 </h3>
@@ -234,10 +257,10 @@ const SpringConference = () => {
                     </p>
                   </li>
                 </ul>
-              </div>
+              </div> */}
 
-              {/* Empowering Women to Lead in STEM */}
-              <div className="mb-6">
+      {/* Empowering Women to Lead in STEM */}
+      {/* <div className="mb-6">
                 <h3 className="font-semibold text-black text-lg mb-2">
                   Empowering Women to Lead in STEM
                 </h3>
@@ -253,10 +276,10 @@ const SpringConference = () => {
                     </p>
                   </li>
                 </ul>
-              </div>
+              </div> */}
 
-              {/* STEM Education */}
-              <div className="mb-6">
+      {/* STEM Education */}
+      {/* <div className="mb-6">
                 <h3 className="font-semibold text-black text-lg mb-2">
                   STEM Education
                 </h3>
@@ -274,10 +297,10 @@ const SpringConference = () => {
                     </p>
                   </li>
                 </ul>
-              </div>
+              </div> */}
 
-              {/* Building STEM Communities */}
-              <div className="mb-6">
+      {/* Building STEM Communities */}
+      {/* <div className="mb-6">
                 <h3 className="font-semibold text-black text-lg mb-2">
                   Building STEM Communities
                 </h3>
@@ -290,10 +313,10 @@ const SpringConference = () => {
                     </p>
                   </li>
                 </ul>
-              </div>
+              </div> */}
 
-              {/* Mental Health & Building Resiliency */}
-              <div className="mb-6">
+      {/* Mental Health & Building Resiliency */}
+      {/* <div className="mb-6">
                 <h3 className="font-semibold text-black text-lg mb-2">
                   Mental Health & Building Resiliency
                 </h3>
@@ -313,10 +336,10 @@ const SpringConference = () => {
                 </ul>
               </div>
             </div>
-          </div>
+          </div> */}
 
-          {/* RIGHT - Student Groups + Thank You */}
-          <div className="bg-red text-white w-full p-8 px-20 flex flex-col gap-12">
+      {/* RIGHT - Student Groups + Thank You */}
+      {/* <div className="bg-red text-white w-full p-8 px-20 flex flex-col gap-12">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-2xl font-semibold mb-6">
                 Participating Student Groups
@@ -342,10 +365,10 @@ const SpringConference = () => {
                 </li>
                 <li>Women Build @ Brown</li>
               </ul>
-            </div>
+            </div> */}
 
-            {/* Thank You Card */}
-            <div className="max-w-md mx-auto bg-white text-black p-6 rounded-lg shadow-md text-center md:mt-32">
+      {/* Thank You Card */}
+      {/* <div className="max-w-md mx-auto bg-white text-black p-6 rounded-lg shadow-md text-center md:mt-32">
               <h3 className="text-2xl font-bold text-red mb-4">Thank You</h3>
               <p className="text-md mb-2">
                 Thank you to all our amazing faculty and graduate students who
@@ -360,8 +383,8 @@ const SpringConference = () => {
             </div>
           </div>
         </div>
-      </section>
-    </LayoutWrapper>
+      </section> */}
+    </div>
   );
 };
 
