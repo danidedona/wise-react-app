@@ -13,7 +13,7 @@ const SpringConference = () => {
           Women in Science & Engineering Presents
         </h1>
         <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl pt-6 sm:pt-10 font-bold text-red">
-          2026 Spring Conference
+          2026 Networking Dinner
         </h1>
 
         <p className="mt-6 sm:mt-10 text-base sm:text-lg text-black">
@@ -90,7 +90,7 @@ const SpringConference = () => {
           <div className="space-y-6">
             {[
               ["7:00 - 7:45 PM", "Structured Networking"],
-              ["7:45 - 8:00 PM", "Closing Keynote Speaker: Dean Megan Russel"],
+              ["7:45 - 8:00 PM", "Closing Keynote Speaker: Dean Megan Russell"],
             ].map(([time, description], i) => (
               <div key={i} className="flex items-start gap-6">
                 <span className="w-[160px] text-right text-xl font-bold shrink-0">
