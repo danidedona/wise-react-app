@@ -89,8 +89,8 @@ const SpringConference = () => {
 
           <div className="space-y-6">
             {[
-              ["7:00 - 7:45 PM", "Structured Networking"],
-              ["7:45 - 8:00 PM", "Closing Keynote Speaker"],
+              ["7:00 - 7:35 PM", "Structured Networking"],
+              ["7:30 - 8:00 PM", "Closing Keynote Speaker"],
             ].map(([time, description], i) => (
               <div key={i} className="flex items-start gap-6">
                 <span className="w-[160px] text-right text-xl font-bold shrink-0">
