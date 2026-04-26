@@ -89,7 +89,7 @@ export default {
 public/events/event-folder-name/
 ```
 
-⚠️ **Important:** Do **NOT** use `.heic` or `.HEIC` images — browsers cannot render them. Use `.jpg` or `.png` formats.
+**Important:** Do **NOT** use `.heic` or `.HEIC` images — browsers cannot render them. Use `.jpg` or `.png` formats.
 
 ---
 
@@ -129,7 +129,7 @@ public/pastEvents/event-folder/
 ```
 
 They must be sequential and in supported formats (`.jpg`, `.png`, `.webp`)  
-❌ `.heic` files are not supported and will break image loading.
+`.heic` files are not supported and will break image loading.
 
 ---
 
@@ -149,7 +149,7 @@ They must be sequential and in supported formats (`.jpg`, `.png`, `.webp`)
 - The final app is embedded in WordPress using a `<iframe>` block
 - WordPress page has **custom CSS** to remove the Brown header, footer, and margins
 
-👉 Embedded iframe points to:
+Embedded iframe points to:
 
 ```
 https://brownwise.netlify.app/
@@ -190,9 +190,9 @@ export default {
 
 ---
 
-## ⚠️ Notes
+## Notes
 
-- **Image formats:** Use `.jpg`, `.png`, `.webp` — ❌ `.heic` will not display
+- **Image formats:** Use `.jpg`, `.png`, `.webp` — `.heic` will not display
 - `index` controls order — lower = more recent
 - `flier` is only used in upcoming events
 - `description`, `coverImage`, and `imageFolder` are only used for past events
@@ -201,7 +201,7 @@ export default {
 
 ---
 
-## ✨ Tech Stack
+## Tech Stack
 
 - [React](https://reactjs.org/)
 - [React Router](https://reactrouter.com/)
@@ -212,7 +212,7 @@ export default {
 
 ---
 
-## 💬 Questions or Handover?
+## Questions or Handover?
 
 Feel free to contact **Daniela DeDona**  
 Happy coding! 💻🧬
