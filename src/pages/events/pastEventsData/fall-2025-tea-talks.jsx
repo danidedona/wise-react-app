@@ -1,5 +1,5 @@
 export default {
-  index: 7,
+  index: 1,
   title: "Fall 2025 Mentor-Mentee Tea Talks", // ADD FALL 2025
   date: "October 24th - 26th, 2025",
   time: "Store hours: 12:00 PM - 10:00 PM",

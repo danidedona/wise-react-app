@@ -1,5 +1,5 @@
 export default {
-  index: 4,
+  index: 0,
   title: "Fall 2025 Spring Conference",
   date: "April 19, 2025",
   link: "/events/spring-2025-spring-conference",

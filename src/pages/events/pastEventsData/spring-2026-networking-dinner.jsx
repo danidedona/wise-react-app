@@ -1,5 +1,5 @@
 export default {
-  index: 0,
+  index: 6,
   title: "2026 WiSE Networking Dinner",
   date: "April 11th, 2026",
   time: "5:00 PM - 8:00 PM",

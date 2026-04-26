@@ -1,5 +1,5 @@
 export default {
-  index: 11,
+  index: 4,
   title: "Fall 2025 Wip x WiSE x Astro Club Stargazing",
   date: "December 8th, 2025",
   time: "6:00 PM",

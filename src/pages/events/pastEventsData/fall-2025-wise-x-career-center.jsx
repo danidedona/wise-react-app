@@ -1,5 +1,5 @@
 export default {
-  index: 8,
+  index: 2,
   title: "Fall 2025 Resumes and LinkedIn Workshop with Career Center",
   date: "October 30th, 2025",
   time: "6:00 PM - 7:00 PM",

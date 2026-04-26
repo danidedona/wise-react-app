@@ -1,5 +1,5 @@
 export default {
-  index: 13,
+  index: 5,
   title: "WiSE Headshots",
   date: "February 20th, 2026",
   time: "3:00 PM - 5:00 PM",
